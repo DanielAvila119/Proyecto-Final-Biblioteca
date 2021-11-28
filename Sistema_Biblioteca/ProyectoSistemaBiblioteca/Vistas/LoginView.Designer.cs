@@ -116,6 +116,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(502, 216);
             this.Controls.Add(this.LoginPictureBox);
             this.Controls.Add(this.btn_Cancelar);
