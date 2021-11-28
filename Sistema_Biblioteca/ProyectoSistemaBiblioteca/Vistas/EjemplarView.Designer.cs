@@ -128,10 +128,11 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(172, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 16);
+            this.label5.Size = new System.Drawing.Size(158, 20);
             this.label5.TabIndex = 55;
             this.label5.Text = "Ejemplar de Libros";
             // 
@@ -169,6 +170,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(527, 354);
             this.Controls.Add(this.EjemplarDataGridView);
             this.Controls.Add(this.btn_Cancelar);
@@ -184,7 +186,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EjemplarView";
             this.Text = "Ejemplar";
             ((System.ComponentModel.ISupportInitialize)(this.EjemplarDataGridView)).EndInit();

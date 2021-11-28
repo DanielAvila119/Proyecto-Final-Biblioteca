@@ -106,10 +106,11 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(216, 9);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(178, 9);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 16);
+            this.label8.Size = new System.Drawing.Size(164, 20);
             this.label8.TabIndex = 69;
             this.label8.Text = "Préstamo de Libros";
             // 
