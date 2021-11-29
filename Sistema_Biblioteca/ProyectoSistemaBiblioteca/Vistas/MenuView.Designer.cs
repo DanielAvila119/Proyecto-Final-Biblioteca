@@ -32,15 +32,15 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.ClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.LibrosToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.EjemplaresToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripTabItem4 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.ClientesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.LibrosToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.EjemplaresToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.PrestamoLibrosToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
@@ -101,7 +101,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripTabItem1.Panel.TabIndex = 2;
             this.toolStripTabItem1.Panel.Text = "CLIENTES";
             this.toolStripTabItem1.Position = 0;
-            this.toolStripTabItem1.Size = new System.Drawing.Size(72, 23);
+            this.toolStripTabItem1.Size = new System.Drawing.Size(82, 30);
             this.toolStripTabItem1.Tag = "1";
             this.toolStripTabItem1.Text = "CLIENTES";
             // 
@@ -122,6 +122,16 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx1.Size = new System.Drawing.Size(122, 78);
             this.toolStripEx1.TabIndex = 0;
             // 
+            // ClientesToolStripButton
+            // 
+            this.ClientesToolStripButton.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.Cliente;
+            this.ClientesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ClientesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ClientesToolStripButton.Name = "ClientesToolStripButton";
+            this.ClientesToolStripButton.Size = new System.Drawing.Size(113, 61);
+            this.ClientesToolStripButton.Text = "Lista de Clientes";
+            this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // toolStripTabItem2
             // 
             this.toolStripTabItem2.Name = "toolStripTabItem2";
@@ -134,7 +144,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripTabItem2.Panel.TabIndex = 3;
             this.toolStripTabItem2.Panel.Text = "LIBROS";
             this.toolStripTabItem2.Position = 1;
-            this.toolStripTabItem2.Size = new System.Drawing.Size(58, 23);
+            this.toolStripTabItem2.Size = new System.Drawing.Size(68, 30);
             this.toolStripTabItem2.Tag = "2";
             this.toolStripTabItem2.Text = "LIBROS";
             // 
@@ -155,6 +165,16 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx2.Size = new System.Drawing.Size(118, 78);
             this.toolStripEx2.TabIndex = 0;
             // 
+            // LibrosToolStripButton
+            // 
+            this.LibrosToolStripButton.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.Libros;
+            this.LibrosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.LibrosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LibrosToolStripButton.Name = "LibrosToolStripButton";
+            this.LibrosToolStripButton.Size = new System.Drawing.Size(109, 61);
+            this.LibrosToolStripButton.Text = "Datos de Libros";
+            this.LibrosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // toolStripTabItem3
             // 
             this.toolStripTabItem3.Name = "toolStripTabItem3";
@@ -167,7 +187,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripTabItem3.Panel.TabIndex = 4;
             this.toolStripTabItem3.Panel.Text = "EJEMPLAR";
             this.toolStripTabItem3.Position = 2;
-            this.toolStripTabItem3.Size = new System.Drawing.Size(78, 23);
+            this.toolStripTabItem3.Size = new System.Drawing.Size(88, 30);
             this.toolStripTabItem3.Tag = "3";
             this.toolStripTabItem3.Text = "EJEMPLAR";
             // 
@@ -188,6 +208,16 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx3.Size = new System.Drawing.Size(88, 78);
             this.toolStripEx3.TabIndex = 0;
             // 
+            // EjemplaresToolStripButton
+            // 
+            this.EjemplaresToolStripButton.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.Ejemplar;
+            this.EjemplaresToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.EjemplaresToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EjemplaresToolStripButton.Name = "EjemplaresToolStripButton";
+            this.EjemplaresToolStripButton.Size = new System.Drawing.Size(79, 61);
+            this.EjemplaresToolStripButton.Text = "Ejemplares";
+            this.EjemplaresToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // toolStripTabItem4
             // 
             this.toolStripTabItem4.Name = "toolStripTabItem4";
@@ -200,7 +230,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripTabItem4.Panel.TabIndex = 5;
             this.toolStripTabItem4.Panel.Text = "PRÉSTAMOS";
             this.toolStripTabItem4.Position = 3;
-            this.toolStripTabItem4.Size = new System.Drawing.Size(89, 23);
+            this.toolStripTabItem4.Size = new System.Drawing.Size(99, 30);
             this.toolStripTabItem4.Tag = "4";
             this.toolStripTabItem4.Text = "PRÉSTAMOS";
             // 
@@ -220,36 +250,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripEx4.Size = new System.Drawing.Size(140, 78);
             this.toolStripEx4.TabIndex = 0;
-            // 
-            // ClientesToolStripButton
-            // 
-            this.ClientesToolStripButton.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.Cliente;
-            this.ClientesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ClientesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ClientesToolStripButton.Name = "ClientesToolStripButton";
-            this.ClientesToolStripButton.Size = new System.Drawing.Size(113, 61);
-            this.ClientesToolStripButton.Text = "Lista de Clientes";
-            this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // LibrosToolStripButton
-            // 
-            this.LibrosToolStripButton.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.Libros;
-            this.LibrosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.LibrosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.LibrosToolStripButton.Name = "LibrosToolStripButton";
-            this.LibrosToolStripButton.Size = new System.Drawing.Size(109, 61);
-            this.LibrosToolStripButton.Text = "Datos de Libros";
-            this.LibrosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // EjemplaresToolStripButton
-            // 
-            this.EjemplaresToolStripButton.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.Ejemplar;
-            this.EjemplaresToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.EjemplaresToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EjemplaresToolStripButton.Name = "EjemplaresToolStripButton";
-            this.EjemplaresToolStripButton.Size = new System.Drawing.Size(79, 61);
-            this.EjemplaresToolStripButton.Text = "Ejemplares";
-            this.EjemplaresToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // PrestamoLibrosToolStripButton
             // 
