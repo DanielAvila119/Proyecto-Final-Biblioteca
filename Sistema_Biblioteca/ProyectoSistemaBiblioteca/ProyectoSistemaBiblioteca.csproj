@@ -66,13 +66,16 @@
     <Compile Include="Controladores\ClienteController.cs" />
     <Compile Include="Controladores\LibroController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
+    <Compile Include="Controladores\PrestamoController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
     <Compile Include="Modelos\DAO\LibroDAO.cs" />
     <Compile Include="Modelos\DAO\LoginDAO.cs" />
+    <Compile Include="Modelos\DAO\PrestamoDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
     <Compile Include="Modelos\Entidades\Libro.cs" />
     <Compile Include="Modelos\Entidades\Login.cs" />
+    <Compile Include="Modelos\Entidades\Prestamo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\ClienteView.cs">

@@ -78,7 +78,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem2;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem4;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(743, 144);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -163,7 +163,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx2.Office12Mode = false;
             this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx2.Size = new System.Drawing.Size(149, 78);
+            this.toolStripEx2.Size = new System.Drawing.Size(118, 78);
             this.toolStripEx2.TabIndex = 0;
             // 
             // LibrosToolStripButton
@@ -207,7 +207,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx3.Office12Mode = false;
             this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx3.Size = new System.Drawing.Size(88, 78);
+            this.toolStripEx3.Size = new System.Drawing.Size(39, 78);
             this.toolStripEx3.TabIndex = 0;
             // 
             // EjemplaresToolStripButton
@@ -216,7 +216,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.EjemplaresToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EjemplaresToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.EjemplaresToolStripButton.Name = "EjemplaresToolStripButton";
-            this.EjemplaresToolStripButton.Size = new System.Drawing.Size(79, 61);
+            this.EjemplaresToolStripButton.Size = new System.Drawing.Size(79, 75);
             this.EjemplaresToolStripButton.Text = "Ejemplares";
             this.EjemplaresToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -250,7 +250,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(140, 78);
+            this.toolStripEx4.Size = new System.Drawing.Size(171, 78);
             this.toolStripEx4.TabIndex = 0;
             // 
             // PrestamoLibrosToolStripButton
@@ -262,6 +262,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.PrestamoLibrosToolStripButton.Size = new System.Drawing.Size(131, 61);
             this.PrestamoLibrosToolStripButton.Text = "Préstamo de Libros";
             this.PrestamoLibrosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.PrestamoLibrosToolStripButton.Click += new System.EventHandler(this.PrestamoLibrosToolStripButton_Click);
             // 
             // MenuView
             // 

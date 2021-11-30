@@ -16,6 +16,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         }
         ClienteView vistaClientes;
         LibroView vistaLibro;
+        PrestamoView vistaPrestamo;
 
         private void ClientesToolStripButton_Click(object sender, EventArgs e)
         {
@@ -48,13 +49,33 @@ namespace ProyectoSistemaBiblioteca.Vistas
             }
             else
             {
-                vistaClientes.Activate();
+                vistaLibro.Activate();
             }
         }
 
         private void VistaLibro_FormClosed(object sender, FormClosedEventArgs e)
         {
             vistaLibro = null;
+        }
+
+        private void PrestamoLibrosToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (vistaPrestamo == null)
+            {
+                vistaPrestamo = new PrestamoView();
+                vistaPrestamo.MdiParent = this;
+                vistaPrestamo.FormClosed += VistaPrestamo_FormClosed;
+                vistaPrestamo.Show();
+            }
+            else
+            {
+                vistaPrestamo.Activate();
+            }
+        }
+        
+        private void VistaPrestamo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaPrestamo = null;
         }
     }
 }
