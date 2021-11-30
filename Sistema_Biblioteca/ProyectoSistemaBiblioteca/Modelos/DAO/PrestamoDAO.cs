@@ -70,8 +70,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" UPDATE PRESTAMO ");
-                sql.Append(" SET FECHAPRESTAMO = @FechaPrestamo, FECHAENTREGA = @FechaEntrega, FECHADEVOLUCION = @FechaDevolucion, " +
-                    "MULTA = @Multa, IDEJEMPLAR = @IdEjemplar, IDCLIENTE= @IdCliente");
+                sql.Append(" SET FECHAPRESTAMO = @FechaPrestamo, FECHAENTREGA = @FechaEntrega, FECHADEVOLUCION = @FechaDevolucion, IDEJEMPLAR = @IdEjemplar, IDCLIENTE = @IdCliente ");
                 sql.Append(" WHERE ID = @Id; ");
 
                 comando.Connection = MiConexion;

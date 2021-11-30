@@ -60,10 +60,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PrestamoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PrestamoDataGridView.Location = new System.Drawing.Point(-1, 336);
+            this.PrestamoDataGridView.Location = new System.Drawing.Point(-1, 276);
             this.PrestamoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.PrestamoDataGridView.Name = "PrestamoDataGridView";
-            this.PrestamoDataGridView.Size = new System.Drawing.Size(536, 128);
+            this.PrestamoDataGridView.Size = new System.Drawing.Size(536, 140);
             this.PrestamoDataGridView.TabIndex = 80;
             // 
             // DevolucionDateTimePicker
@@ -156,7 +156,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(419, 281);
+            this.btn_Cancelar.Location = new System.Drawing.Point(412, 237);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(94, 32);
             this.btn_Cancelar.TabIndex = 85;
@@ -165,7 +165,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Location = new System.Drawing.Point(319, 281);
+            this.btn_Eliminar.Location = new System.Drawing.Point(312, 237);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(94, 32);
             this.btn_Eliminar.TabIndex = 84;
@@ -175,7 +175,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // btn_Guardar
             // 
             this.btn_Guardar.Enabled = false;
-            this.btn_Guardar.Location = new System.Drawing.Point(219, 281);
+            this.btn_Guardar.Location = new System.Drawing.Point(212, 237);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(94, 32);
             this.btn_Guardar.TabIndex = 83;
@@ -184,7 +184,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_Modificar
             // 
-            this.btn_Modificar.Location = new System.Drawing.Point(119, 281);
+            this.btn_Modificar.Location = new System.Drawing.Point(112, 237);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(94, 32);
             this.btn_Modificar.TabIndex = 82;
@@ -193,7 +193,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_Nuevo
             // 
-            this.btn_Nuevo.Location = new System.Drawing.Point(19, 281);
+            this.btn_Nuevo.Location = new System.Drawing.Point(12, 237);
             this.btn_Nuevo.Name = "btn_Nuevo";
             this.btn_Nuevo.Size = new System.Drawing.Size(94, 32);
             this.btn_Nuevo.TabIndex = 81;
@@ -245,7 +245,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(534, 463);
+            this.ClientSize = new System.Drawing.Size(534, 415);
             this.Controls.Add(this.TxtIdCliente);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtIdEjemplar);
