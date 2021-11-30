@@ -75,13 +75,16 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(179, 22);
             this.txt_Email.TabIndex = 3;
+            this.txt_Email.Text = "grupo1@unah.hn";
             // 
             // txt_Clave
             // 
             this.txt_Clave.Location = new System.Drawing.Point(133, 105);
             this.txt_Clave.Name = "txt_Clave";
+            this.txt_Clave.PasswordChar = '*';
             this.txt_Clave.Size = new System.Drawing.Size(178, 22);
             this.txt_Clave.TabIndex = 4;
+            this.txt_Clave.Text = "1234";
             // 
             // btn_Aceptar
             // 
@@ -127,7 +130,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginView";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.LoginPictureBox)).EndInit();
