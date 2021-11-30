@@ -15,6 +15,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             InitializeComponent();
         }
         ClienteView vistaClientes;
+        LibroView vistaLibro;
 
         private void ClientesToolStripButton_Click(object sender, EventArgs e)
         {
@@ -34,6 +35,26 @@ namespace ProyectoSistemaBiblioteca.Vistas
         private void VistaClientes_FormClosed(object sender, FormClosedEventArgs e)
         {
             vistaClientes = null;
+        }
+
+        private void LibrosToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (vistaLibro == null)
+            {
+                vistaLibro = new LibroView();
+                vistaLibro.MdiParent = this;
+                vistaLibro.FormClosed += VistaLibro_FormClosed;
+                vistaLibro.Show();
+            }
+            else
+            {
+                vistaClientes.Activate();
+            }
+        }
+
+        private void VistaLibro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaLibro = null;
         }
     }
 }

@@ -78,7 +78,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ribbonControlAdv1.QuickPanelImageLayout = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem2;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(743, 144);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -119,7 +119,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(153, 78);
+            this.toolStripEx1.Size = new System.Drawing.Size(122, 78);
             this.toolStripEx1.TabIndex = 0;
             // 
             // ClientesToolStripButton
@@ -163,7 +163,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx2.Office12Mode = false;
             this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx2.Size = new System.Drawing.Size(118, 78);
+            this.toolStripEx2.Size = new System.Drawing.Size(149, 78);
             this.toolStripEx2.TabIndex = 0;
             // 
             // LibrosToolStripButton
@@ -175,6 +175,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.LibrosToolStripButton.Size = new System.Drawing.Size(109, 61);
             this.LibrosToolStripButton.Text = "Datos de Libros";
             this.LibrosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.LibrosToolStripButton.Click += new System.EventHandler(this.LibrosToolStripButton_Click);
             // 
             // toolStripTabItem3
             // 

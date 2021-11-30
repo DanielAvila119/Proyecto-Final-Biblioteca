@@ -49,11 +49,11 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Nuevo = new System.Windows.Forms.Button();
-            this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LibrosDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // LibrosDataGridView
@@ -70,6 +70,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_NumEjemplares
             // 
+            this.txt_NumEjemplares.Enabled = false;
             this.txt_NumEjemplares.Location = new System.Drawing.Point(172, 194);
             this.txt_NumEjemplares.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NumEjemplares.Name = "txt_NumEjemplares";
@@ -78,6 +79,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_NumEdicion
             // 
+            this.txt_NumEdicion.Enabled = false;
             this.txt_NumEdicion.Location = new System.Drawing.Point(173, 164);
             this.txt_NumEdicion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NumEdicion.Name = "txt_NumEdicion";
@@ -86,6 +88,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Editor
             // 
+            this.txt_Editor.Enabled = false;
             this.txt_Editor.Location = new System.Drawing.Point(173, 134);
             this.txt_Editor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Editor.Name = "txt_Editor";
@@ -94,6 +97,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Autor
             // 
+            this.txt_Autor.Enabled = false;
             this.txt_Autor.Location = new System.Drawing.Point(173, 104);
             this.txt_Autor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Autor.Name = "txt_Autor";
@@ -102,6 +106,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Titulo
             // 
+            this.txt_Titulo.Enabled = false;
             this.txt_Titulo.Location = new System.Drawing.Point(173, 74);
             this.txt_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Titulo.Name = "txt_Titulo";
@@ -235,18 +240,20 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_Nuevo.Text = "Nuevo";
             this.btn_Nuevo.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ImagenPictureBox
             // 
+            this.ImagenPictureBox.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.LIBRO_ICONO;
             this.ImagenPictureBox.Location = new System.Drawing.Point(455, 32);
             this.ImagenPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(123, 154);
+            this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox.TabIndex = 66;
             this.ImagenPictureBox.TabStop = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // LibroView
             // 
@@ -279,8 +286,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Name = "LibroView";
             this.Text = "Libro";
             ((System.ComponentModel.ISupportInitialize)(this.LibrosDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

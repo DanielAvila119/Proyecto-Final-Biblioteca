@@ -153,7 +153,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\LIBRO ICONO.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\programador.png" />
   </ItemGroup>

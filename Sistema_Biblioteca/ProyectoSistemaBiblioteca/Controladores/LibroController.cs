@@ -55,7 +55,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 vista.txt_ID.Text = vista.LibrosDataGridView.CurrentRow.Cells["ID"].Value.ToString();
                 vista.txt_Titulo.Text = vista.LibrosDataGridView.CurrentRow.Cells["TITULO"].Value.ToString();
                 vista.txt_Autor.Text = vista.LibrosDataGridView.CurrentRow.Cells["AUTOR"].Value.ToString();
-                vista.txt_Editor.Text = vista.LibrosDataGridView.CurrentRow.Cells["EDITOR"].Value.ToString();
+                vista.txt_Editor.Text = vista.LibrosDataGridView.CurrentRow.Cells["EDITORIAL"].Value.ToString();
                 vista.txt_NumEdicion.Text = vista.LibrosDataGridView.CurrentRow.Cells["NUMEROEDICION"].Value.ToString();
                 vista.txt_NumEjemplares.Text = vista.LibrosDataGridView.CurrentRow.Cells["NUMEROEJEMPLARES"].Value.ToString();
 
@@ -142,12 +142,12 @@ namespace ProyectoSistemaBiblioteca.Controladores
                         DeshabilitarControles();
                         LimpiarControles();
 
-                        MessageBox.Show("¡Usuario Modificado Exitosamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("¡Libro Modificado Exitosamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ListarLibros();
                     }
                     else
                     {
-                        MessageBox.Show("No se puedo Modificar el usuario. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se puedo Modificar el libro. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
