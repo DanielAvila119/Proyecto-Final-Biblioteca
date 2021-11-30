@@ -29,6 +29,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,13 +43,15 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_Telefono = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Ocupacion = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Nuevo = new System.Windows.Forms.Button();
             this.ClientesDataGridView = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ClientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -121,7 +124,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_ID.Location = new System.Drawing.Point(171, 46);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.ReadOnly = true;
-            this.txt_ID.Size = new System.Drawing.Size(69, 22);
+            this.txt_ID.Size = new System.Drawing.Size(82, 22);
             this.txt_ID.TabIndex = 7;
             // 
             // txt_Nombre
@@ -159,14 +162,14 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_Ocupacion.Size = new System.Drawing.Size(213, 22);
             this.txt_Ocupacion.TabIndex = 12;
             // 
-            // button1
+            // btn_cancelar
             // 
-            this.button1.Location = new System.Drawing.Point(418, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 32);
-            this.button1.TabIndex = 91;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Location = new System.Drawing.Point(418, 259);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(94, 32);
+            this.btn_cancelar.TabIndex = 91;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = true;
             // 
             // btn_Eliminar
             // 
@@ -217,13 +220,17 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ClientesDataGridView.Size = new System.Drawing.Size(530, 154);
             this.ClientesDataGridView.TabIndex = 86;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(526, 449);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.btn_Modificar);
@@ -243,10 +250,11 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClienteView";
             this.Text = "Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.ClientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +269,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btn_cancelar;
         public System.Windows.Forms.Button btn_Eliminar;
         public System.Windows.Forms.Button btn_Guardar;
         public System.Windows.Forms.Button btn_Modificar;
@@ -273,5 +281,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
         public System.Windows.Forms.TextBox txt_Telefono;
         public System.Windows.Forms.TextBox txt_Email;
         public System.Windows.Forms.TextBox txt_Ocupacion;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

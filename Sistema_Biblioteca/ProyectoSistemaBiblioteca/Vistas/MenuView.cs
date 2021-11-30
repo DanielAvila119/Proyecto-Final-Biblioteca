@@ -14,5 +14,26 @@ namespace ProyectoSistemaBiblioteca.Vistas
         {
             InitializeComponent();
         }
+        ClienteView vistaClientes;
+
+        private void ClientesToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (vistaClientes == null)
+            {
+                vistaClientes = new ClienteView();
+                vistaClientes.MdiParent = this;
+                vistaClientes.FormClosed += VistaClientes_FormClosed;
+                vistaClientes.Show();
+            }
+            else
+            {
+                vistaClientes.Activate();
+            }
+        }
+
+        private void VistaClientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaClientes = null;
+        }
     }
 }

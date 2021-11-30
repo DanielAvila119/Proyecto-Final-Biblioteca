@@ -119,7 +119,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(122, 78);
+            this.toolStripEx1.Size = new System.Drawing.Size(153, 78);
             this.toolStripEx1.TabIndex = 0;
             // 
             // ClientesToolStripButton
@@ -131,6 +131,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ClientesToolStripButton.Size = new System.Drawing.Size(113, 61);
             this.ClientesToolStripButton.Text = "Lista de Clientes";
             this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ClientesToolStripButton.Click += new System.EventHandler(this.ClientesToolStripButton_Click);
             // 
             // toolStripTabItem2
             // 
