@@ -144,10 +144,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_Email;
-        private System.Windows.Forms.TextBox txt_Clave;
-        private System.Windows.Forms.Button btn_Aceptar;
-        private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.PictureBox LoginPictureBox;
+        public System.Windows.Forms.TextBox txt_Email;
+        public System.Windows.Forms.TextBox txt_Clave;
+        public System.Windows.Forms.Button btn_Aceptar;
+        public System.Windows.Forms.Button btn_Cancelar;
     }
 }

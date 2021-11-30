@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProyectoSistemaBiblioteca.Modelos.Entidades
 {
-    public class Conexion
+    public class Login
     {
-
-
+        public int Id { get; set; }
+        public string Email { get; set; }
+        public string Clave { get; set; }
     }
 }

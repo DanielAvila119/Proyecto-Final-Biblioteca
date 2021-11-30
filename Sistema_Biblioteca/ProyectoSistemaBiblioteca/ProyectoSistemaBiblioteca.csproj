@@ -49,6 +49,7 @@
     <Reference Include="Syncfusion.Tools.Base, Version=19.3460.0.43, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Tools.Windows, Version=19.3460.0.43, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -65,9 +66,10 @@
     <Compile Include="Controladores\ClienteController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
+    <Compile Include="Modelos\DAO\Conexion.cs" />
     <Compile Include="Modelos\DAO\LoginDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
-    <Compile Include="Modelos\Entidades\Conexion.cs" />
+    <Compile Include="Modelos\Entidades\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\ClienteView.cs">

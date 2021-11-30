@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoSistemaBiblioteca.Controladores;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         public LoginView()
         {
             InitializeComponent();
+            LoginController controlador = new LoginController(this);
         }
     }
 }
