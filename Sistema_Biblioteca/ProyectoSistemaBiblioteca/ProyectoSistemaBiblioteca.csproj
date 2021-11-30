@@ -84,6 +84,12 @@
     <Compile Include="Vistas\ClienteView.Designer.cs">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\DetalleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\DetalleView.Designer.cs">
+      <DependentUpon>DetalleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\EjemplarView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\DetalleView.resx">
+      <DependentUpon>DetalleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\EjemplarView.resx">
       <DependentUpon>EjemplarView.cs</DependentUpon>
