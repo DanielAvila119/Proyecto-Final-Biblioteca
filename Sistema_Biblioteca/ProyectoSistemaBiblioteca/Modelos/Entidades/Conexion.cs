@@ -9,5 +9,6 @@ namespace ProyectoSistemaBiblioteca.Modelos.Entidades
     public class Conexion
     {
 
+
     }
 }
