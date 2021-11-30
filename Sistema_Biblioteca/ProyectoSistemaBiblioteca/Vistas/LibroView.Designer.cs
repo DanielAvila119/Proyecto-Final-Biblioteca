@@ -29,6 +29,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LibrosDataGridView = new System.Windows.Forms.DataGridView();
             this.txt_NumEjemplares = new System.Windows.Forms.TextBox();
             this.txt_NumEdicion = new System.Windows.Forms.TextBox();
@@ -49,8 +50,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Nuevo = new System.Windows.Forms.Button();
             this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.LibrosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // LibrosDataGridView
@@ -60,7 +63,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LibrosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LibrosDataGridView.Location = new System.Drawing.Point(0, 274);
-            this.LibrosDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LibrosDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.LibrosDataGridView.Name = "LibrosDataGridView";
             this.LibrosDataGridView.Size = new System.Drawing.Size(591, 154);
             this.LibrosDataGridView.TabIndex = 65;
@@ -68,7 +71,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // txt_NumEjemplares
             // 
             this.txt_NumEjemplares.Location = new System.Drawing.Point(172, 194);
-            this.txt_NumEjemplares.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_NumEjemplares.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NumEjemplares.Name = "txt_NumEjemplares";
             this.txt_NumEjemplares.Size = new System.Drawing.Size(260, 22);
             this.txt_NumEjemplares.TabIndex = 59;
@@ -76,7 +79,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // txt_NumEdicion
             // 
             this.txt_NumEdicion.Location = new System.Drawing.Point(173, 164);
-            this.txt_NumEdicion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_NumEdicion.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NumEdicion.Name = "txt_NumEdicion";
             this.txt_NumEdicion.Size = new System.Drawing.Size(259, 22);
             this.txt_NumEdicion.TabIndex = 58;
@@ -84,7 +87,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // txt_Editor
             // 
             this.txt_Editor.Location = new System.Drawing.Point(173, 134);
-            this.txt_Editor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Editor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Editor.Name = "txt_Editor";
             this.txt_Editor.Size = new System.Drawing.Size(260, 22);
             this.txt_Editor.TabIndex = 57;
@@ -92,7 +95,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // txt_Autor
             // 
             this.txt_Autor.Location = new System.Drawing.Point(173, 104);
-            this.txt_Autor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Autor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Autor.Name = "txt_Autor";
             this.txt_Autor.Size = new System.Drawing.Size(259, 22);
             this.txt_Autor.TabIndex = 56;
@@ -100,7 +103,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // txt_Titulo
             // 
             this.txt_Titulo.Location = new System.Drawing.Point(173, 74);
-            this.txt_Titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Titulo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Titulo.Name = "txt_Titulo";
             this.txt_Titulo.Size = new System.Drawing.Size(259, 22);
             this.txt_Titulo.TabIndex = 55;
@@ -109,7 +112,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             this.txt_ID.Enabled = false;
             this.txt_ID.Location = new System.Drawing.Point(174, 44);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.ReadOnly = true;
             this.txt_ID.Size = new System.Drawing.Size(110, 22);
@@ -241,6 +244,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ImagenPictureBox.TabIndex = 66;
             this.ImagenPictureBox.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // LibroView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -268,11 +275,12 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LibroView";
             this.Text = "Libro";
             ((System.ComponentModel.ISupportInitialize)(this.LibrosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +308,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
         public System.Windows.Forms.Button btn_Guardar;
         public System.Windows.Forms.Button btn_Modificar;
         public System.Windows.Forms.Button btn_Nuevo;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
