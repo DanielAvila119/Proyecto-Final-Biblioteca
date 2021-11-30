@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoSistemaBiblioteca.Modelos.Entidades
 {
+
     public class Cliente
     {
 
