@@ -12,7 +12,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
     public class PrestamoDAO : Conexion
     {
         SqlCommand comando = new SqlCommand();
-        public bool InsertarNuevoPrestamo(Prestamo prestamo, Cliente cliente)
+        public bool InsertarNuevoPrestamo(Prestamo prestamo, Cliente cliente, Ejemplar ejemplar)
         {
             bool inserto = false;
             try
@@ -27,7 +27,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 comando.Parameters.Add("@FechaPrestamo", SqlDbType.DateTime).Value = prestamo.FechaPrestamo;
                 comando.Parameters.Add("@FechaEntrega", SqlDbType.DateTime).Value = prestamo.FechaEntrega;
                 comando.Parameters.Add("@FechaDevolucion", SqlDbType.DateTime).Value = prestamo.FechaDevolucion;
-                //comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = prestamo.;
+                comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = ejemplar.Id;
                 comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = cliente.Id;
                 comando.ExecuteNonQuery();
                 inserto = true;
@@ -63,7 +63,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             return dt;
         }
-        public bool ActualizarPrestamo(Prestamo prestamo, Cliente cliente)
+        public bool ActualizarPrestamo(Prestamo prestamo, Cliente cliente, Ejemplar ejemplar)
         {
             bool modifico = false;
             try
@@ -81,7 +81,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 comando.Parameters.Add("@FechaPrestamo", SqlDbType.DateTime).Value = prestamo.FechaPrestamo;
                 comando.Parameters.Add("@FechaEntrega", SqlDbType.DateTime).Value = prestamo.FechaEntrega;
                 comando.Parameters.Add("@FechaDevolucion", SqlDbType.DateTime).Value = prestamo.FechaDevolucion;
-                //comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = prestamo.IdEjemplar;
+                comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = ejemplar.Id;
                 comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = cliente.Id;
                 comando.ExecuteNonQuery();
                 modifico = true;

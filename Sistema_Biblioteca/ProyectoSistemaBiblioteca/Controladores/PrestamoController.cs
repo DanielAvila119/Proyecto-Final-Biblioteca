@@ -16,6 +16,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
         PrestamoDAO prestamoDAO = new PrestamoDAO();
         Prestamo prestamo = new Prestamo();
         Cliente cliente = new Cliente();
+        Ejemplar ejemplar = new Ejemplar();
         string operacion = string.Empty;
 
         public PrestamoController(PrestamoView view)
@@ -116,12 +117,12 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 prestamo.FechaPrestamo = vista.PrestamoDateTimePicker.Value;
                 prestamo.FechaEntrega = vista.EntregaDateTimePicker.Value;
                 prestamo.FechaDevolucion = vista.DevolucionDateTimePicker.Value;
-                //prestamo.IdEjemplar = Convert.ToInt32(vista.TxtIdEjemplar.Text);
-                //prestamo.IdCliente = Convert.ToInt32(vista.TxtIdCliente.Text);
+                ejemplar.Id = Convert.ToInt32(vista.TxtIdEjemplar.Text);
+                cliente.Id = Convert.ToInt32(vista.TxtIdCliente.Text);
 
                 if (operacion == "Nuevo")
                 {
-                    bool inserto = prestamoDAO.InsertarNuevoPrestamo(prestamo, cliente);
+                    bool inserto = prestamoDAO.InsertarNuevoPrestamo(prestamo, cliente, ejemplar);
                     if (inserto)
                     {
                         MessageBox.Show("Préstamo creado exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -135,7 +136,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 else if (operacion == "Modificar")
                 {
                     prestamo.Id = Convert.ToInt32(vista.txt_ID.Text);
-                    bool modifico = prestamoDAO.ActualizarPrestamo(prestamo, cliente);
+                    bool modifico = prestamoDAO.ActualizarPrestamo(prestamo, cliente, ejemplar);
                     if (modifico)
                     {
                         DeshabilitarControles();
