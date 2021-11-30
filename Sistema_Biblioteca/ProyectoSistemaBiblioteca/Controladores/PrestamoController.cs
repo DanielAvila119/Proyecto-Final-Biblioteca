@@ -15,6 +15,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
         PrestamoView vista;
         PrestamoDAO prestamoDAO = new PrestamoDAO();
         Prestamo prestamo = new Prestamo();
+        Cliente cliente = new Cliente();
         string operacion = string.Empty;
 
         public PrestamoController(PrestamoView view)
@@ -56,7 +57,6 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 vista.PrestamoDateTimePicker.Text = vista.PrestamoDataGridView.CurrentRow.Cells["FECHAPRESTAMO"].Value.ToString();
                 vista.EntregaDateTimePicker.Text = vista.PrestamoDataGridView.CurrentRow.Cells["FECHAENTREGA"].Value.ToString();
                 vista.DevolucionDateTimePicker.Text = vista.PrestamoDataGridView.CurrentRow.Cells["FECHADEVOLUCION"].Value.ToString();
-                vista.txt_Multa.Text = vista.PrestamoDataGridView.CurrentRow.Cells["MULTA"].Value.ToString();
                 vista.TxtIdEjemplar.Text = vista.PrestamoDataGridView.CurrentRow.Cells["IDEJEMPLAR"].Value.ToString();
                 vista.TxtIdCliente.Text = vista.PrestamoDataGridView.CurrentRow.Cells["IDCLIENTE"].Value.ToString();
                 HabilitarControles();
@@ -99,7 +99,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
             }
             if (vista.TxtIdEjemplar.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Multa, "Por favor ingrese un id de ejemplar");
+                vista.errorProvider1.SetError(vista.TxtIdEjemplar, "Por favor ingrese un id de ejemplar");
                 vista.TxtIdEjemplar.Focus();
                 return;
             }
@@ -116,27 +116,26 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 prestamo.FechaPrestamo = vista.PrestamoDateTimePicker.Value;
                 prestamo.FechaEntrega = vista.EntregaDateTimePicker.Value;
                 prestamo.FechaDevolucion = vista.DevolucionDateTimePicker.Value;
-                prestamo.Multa = Convert.ToDecimal(vista.txt_Multa.Text);
-                prestamo.IdEjemplar = Convert.ToInt32( vista.TxtIdEjemplar.Text);
-                prestamo.IdCliente = Convert.ToInt32(vista.TxtIdCliente.Text);
+                //prestamo.IdEjemplar = Convert.ToInt32(vista.TxtIdEjemplar.Text);
+                //prestamo.IdCliente = Convert.ToInt32(vista.TxtIdCliente.Text);
 
                 if (operacion == "Nuevo")
                 {
-                    bool inserto = prestamoDAO.InsertarNuevoPrestamo(prestamo);
+                    bool inserto = prestamoDAO.InsertarNuevoPrestamo(prestamo, cliente);
                     if (inserto)
                     {
-                        MessageBox.Show("Cliente creado exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Préstamo creado exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo crear el Cliente, intente denuevo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se pudo insertar el Préstamo, intente denuevo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
                 else if (operacion == "Modificar")
                 {
                     prestamo.Id = Convert.ToInt32(vista.txt_ID.Text);
-                    bool modifico = prestamoDAO.ActualizarPrestamo(prestamo);
+                    bool modifico = prestamoDAO.ActualizarPrestamo(prestamo, cliente);
                     if (modifico)
                     {
                         DeshabilitarControles();
@@ -164,7 +163,6 @@ namespace ProyectoSistemaBiblioteca.Controladores
             vista.PrestamoDateTimePicker.Enabled = true;
             vista.EntregaDateTimePicker.Enabled = true;
             vista.DevolucionDateTimePicker.Enabled = true;
-            vista.txt_Multa.Enabled = true;
             vista.TxtIdEjemplar.Enabled = true;
             vista.TxtIdCliente.Enabled = true;
 
@@ -182,7 +180,6 @@ namespace ProyectoSistemaBiblioteca.Controladores
             vista.PrestamoDateTimePicker.Enabled = false;
             vista.EntregaDateTimePicker.Enabled = false;
             vista.DevolucionDateTimePicker.Enabled = false;
-            vista.txt_Multa.Enabled = false;
             vista.TxtIdEjemplar.Enabled = false;
             vista.TxtIdCliente.Enabled = false;
 
@@ -201,7 +198,6 @@ namespace ProyectoSistemaBiblioteca.Controladores
             vista.PrestamoDateTimePicker.Value.ToString();
             vista.EntregaDateTimePicker.Value.ToString();
             vista.DevolucionDateTimePicker.Value.ToString();
-            vista.txt_Multa.Clear();
             vista.TxtIdEjemplar.Clear();
             vista.TxtIdCliente.Clear();
         }

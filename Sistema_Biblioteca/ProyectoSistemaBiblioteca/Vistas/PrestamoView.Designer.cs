@@ -34,10 +34,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.DevolucionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.EntregaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.PrestamoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.txt_Multa = new System.Windows.Forms.TextBox();
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,6 +68,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // DevolucionDateTimePicker
             // 
+            this.DevolucionDateTimePicker.Enabled = false;
             this.DevolucionDateTimePicker.Location = new System.Drawing.Point(182, 133);
             this.DevolucionDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.DevolucionDateTimePicker.Name = "DevolucionDateTimePicker";
@@ -78,6 +77,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // EntregaDateTimePicker
             // 
+            this.EntregaDateTimePicker.Enabled = false;
             this.EntregaDateTimePicker.Location = new System.Drawing.Point(182, 103);
             this.EntregaDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.EntregaDateTimePicker.Name = "EntregaDateTimePicker";
@@ -86,19 +86,12 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // PrestamoDateTimePicker
             // 
+            this.PrestamoDateTimePicker.Enabled = false;
             this.PrestamoDateTimePicker.Location = new System.Drawing.Point(182, 73);
             this.PrestamoDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.PrestamoDateTimePicker.Name = "PrestamoDateTimePicker";
             this.PrestamoDateTimePicker.Size = new System.Drawing.Size(281, 22);
             this.PrestamoDateTimePicker.TabIndex = 72;
-            // 
-            // txt_Multa
-            // 
-            this.txt_Multa.Location = new System.Drawing.Point(182, 163);
-            this.txt_Multa.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Multa.Name = "txt_Multa";
-            this.txt_Multa.Size = new System.Drawing.Size(114, 22);
-            this.txt_Multa.TabIndex = 71;
             // 
             // txt_ID
             // 
@@ -120,16 +113,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.label8.Size = new System.Drawing.Size(164, 20);
             this.label8.TabIndex = 69;
             this.label8.Text = "Préstamo de Libros";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 166);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "Multa:";
             // 
             // label4
             // 
@@ -219,7 +202,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // TxtIdEjemplar
             // 
-            this.TxtIdEjemplar.Location = new System.Drawing.Point(182, 193);
+            this.TxtIdEjemplar.Location = new System.Drawing.Point(182, 163);
             this.TxtIdEjemplar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtIdEjemplar.Name = "TxtIdEjemplar";
             this.TxtIdEjemplar.Size = new System.Drawing.Size(114, 22);
@@ -228,7 +211,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 196);
+            this.label6.Location = new System.Drawing.Point(81, 166);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 16);
@@ -237,7 +220,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // TxtIdCliente
             // 
-            this.TxtIdCliente.Location = new System.Drawing.Point(182, 223);
+            this.TxtIdCliente.Location = new System.Drawing.Point(182, 193);
             this.TxtIdCliente.Margin = new System.Windows.Forms.Padding(4);
             this.TxtIdCliente.Name = "TxtIdCliente";
             this.TxtIdCliente.Size = new System.Drawing.Size(114, 22);
@@ -246,7 +229,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(95, 226);
+            this.label7.Location = new System.Drawing.Point(95, 196);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 16);
@@ -276,10 +259,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.DevolucionDateTimePicker);
             this.Controls.Add(this.EntregaDateTimePicker);
             this.Controls.Add(this.PrestamoDateTimePicker);
-            this.Controls.Add(this.txt_Multa);
             this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -301,10 +282,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
         public System.Windows.Forms.DateTimePicker DevolucionDateTimePicker;
         public System.Windows.Forms.DateTimePicker EntregaDateTimePicker;
         public System.Windows.Forms.DateTimePicker PrestamoDateTimePicker;
-        public System.Windows.Forms.TextBox txt_Multa;
         public System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

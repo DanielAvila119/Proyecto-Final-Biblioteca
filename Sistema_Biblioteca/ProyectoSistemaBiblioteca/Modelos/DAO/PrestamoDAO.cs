@@ -12,14 +12,14 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
     public class PrestamoDAO : Conexion
     {
         SqlCommand comando = new SqlCommand();
-        public bool InsertarNuevoPrestamo(Prestamo prestamo)
+        public bool InsertarNuevoPrestamo(Prestamo prestamo, Cliente cliente)
         {
             bool inserto = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" INSERT INTO PRESTAMO ");
-                sql.Append(" VALUES (@FechaPrestamo, @FechaEntrega, @FechaDevolucion, @Multa, @IdEjemplar, @IdCliente); ");
+                sql.Append(" VALUES (@FechaPrestamo, @FechaEntrega, @FechaDevolucion, @IdEjemplar, @IdCliente); ");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;
@@ -27,9 +27,8 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 comando.Parameters.Add("@FechaPrestamo", SqlDbType.DateTime).Value = prestamo.FechaPrestamo;
                 comando.Parameters.Add("@FechaEntrega", SqlDbType.DateTime).Value = prestamo.FechaEntrega;
                 comando.Parameters.Add("@FechaDevolucion", SqlDbType.DateTime).Value = prestamo.FechaDevolucion;
-                comando.Parameters.Add("@Multa", SqlDbType.Decimal).Value = prestamo.Multa;
-                comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = prestamo.Multa;
-                comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = prestamo.Multa;
+                //comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = prestamo.;
+                comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = cliente.Id;
                 comando.ExecuteNonQuery();
                 inserto = true;
                 MiConexion.Close();
@@ -64,7 +63,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             return dt;
         }
-        public bool ActualizarPrestamo(Prestamo prestamo)
+        public bool ActualizarPrestamo(Prestamo prestamo, Cliente cliente)
         {
             bool modifico = false;
             try
@@ -82,9 +81,8 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 comando.Parameters.Add("@FechaPrestamo", SqlDbType.DateTime).Value = prestamo.FechaPrestamo;
                 comando.Parameters.Add("@FechaEntrega", SqlDbType.DateTime).Value = prestamo.FechaEntrega;
                 comando.Parameters.Add("@FechaDevolucion", SqlDbType.DateTime).Value = prestamo.FechaDevolucion;
-                comando.Parameters.Add("@Multa", SqlDbType.Decimal).Value = prestamo.Multa;
-                comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = prestamo.Multa;
-                comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = prestamo.Multa;
+                //comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = prestamo.IdEjemplar;
+                comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = cliente.Id;
                 comando.ExecuteNonQuery();
                 modifico = true;
                 MiConexion.Close();
