@@ -129,6 +129,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Nombre
             // 
+            this.txt_Nombre.Enabled = false;
             this.txt_Nombre.Location = new System.Drawing.Point(171, 81);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(213, 22);
@@ -136,6 +137,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Direccion
             // 
+            this.txt_Direccion.Enabled = false;
             this.txt_Direccion.Location = new System.Drawing.Point(171, 114);
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(213, 22);
@@ -143,6 +145,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Telefono
             // 
+            this.txt_Telefono.Enabled = false;
             this.txt_Telefono.Location = new System.Drawing.Point(170, 145);
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(213, 22);
@@ -150,6 +153,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Email
             // 
+            this.txt_Email.Enabled = false;
             this.txt_Email.Location = new System.Drawing.Point(171, 179);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(213, 22);
@@ -157,6 +161,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_Ocupacion
             // 
+            this.txt_Ocupacion.Enabled = false;
             this.txt_Ocupacion.Location = new System.Drawing.Point(171, 213);
             this.txt_Ocupacion.Name = "txt_Ocupacion";
             this.txt_Ocupacion.Size = new System.Drawing.Size(213, 22);
@@ -164,6 +169,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.Enabled = false;
             this.btn_cancelar.Location = new System.Drawing.Point(418, 259);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(94, 32);
@@ -173,6 +179,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_Eliminar
             // 
+            this.btn_Eliminar.Enabled = false;
             this.btn_Eliminar.Location = new System.Drawing.Point(318, 259);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(94, 32);
