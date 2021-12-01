@@ -96,6 +96,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.LibrosdataGridView);
             this.Name = "BuscarLibroView";
             this.Text = "BuscarLibroView";
+            
             ((System.ComponentModel.ISupportInitialize)(this.LibrosdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
