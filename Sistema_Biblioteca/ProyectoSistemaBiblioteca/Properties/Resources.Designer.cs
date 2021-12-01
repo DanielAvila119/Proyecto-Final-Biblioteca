@@ -73,6 +73,16 @@ namespace ProyectoSistemaBiblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Detalle {
+            get {
+                object obj = ResourceManager.GetObject("Detalle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ejemplar {
             get {
                 object obj = ResourceManager.GetObject("Ejemplar", resourceCulture);

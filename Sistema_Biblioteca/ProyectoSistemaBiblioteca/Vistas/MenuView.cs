@@ -18,6 +18,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         LibroView vistaLibro;
         PrestamoView vistaPrestamo;
         EjemplarView vistaEjemplar;
+        DetalleView vistaDetalle;
 
         private void ClientesToolStripButton_Click(object sender, EventArgs e)
         {
@@ -97,6 +98,26 @@ namespace ProyectoSistemaBiblioteca.Vistas
         private void VistaEjemplar_FormClosed(object sender, FormClosedEventArgs e)
         {
             vistaEjemplar = null;
+        }
+
+        private void DetalleToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (vistaDetalle == null)
+            {
+                vistaDetalle = new DetalleView();
+                vistaDetalle.MdiParent = this;
+                vistaDetalle.FormClosed += VistaDetalle_FormClosed;
+                vistaDetalle.Show();
+            }
+            else
+            {
+                vistaDetalle.Activate();
+            }
+        }
+
+        private void VistaDetalle_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            vistaDetalle = null;
         }
     }
 }
