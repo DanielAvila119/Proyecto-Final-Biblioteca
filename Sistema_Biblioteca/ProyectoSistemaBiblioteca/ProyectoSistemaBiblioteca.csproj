@@ -67,23 +67,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controladores\ClienteController.cs" />
+    <Compile Include="Controladores\DetalleController.cs" />
     <Compile Include="Controladores\EjemplarController.cs" />
     <Compile Include="Controladores\LibroController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
     <Compile Include="Controladores\PrestamoController.cs" />
     <Compile Include="Modelos\DAO\ClienteDAO.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\DetalleDAO.cs" />
     <Compile Include="Modelos\DAO\EjemplarDAO.cs" />
     <Compile Include="Modelos\DAO\LibroDAO.cs" />
     <Compile Include="Modelos\DAO\LoginDAO.cs" />
     <Compile Include="Modelos\DAO\PrestamoDAO.cs" />
     <Compile Include="Modelos\Entidades\Cliente.cs" />
+    <Compile Include="Modelos\Entidades\Detalle.cs" />
     <Compile Include="Modelos\Entidades\Ejemplar.cs" />
     <Compile Include="Modelos\Entidades\Libro.cs" />
     <Compile Include="Modelos\Entidades\Login.cs" />
     <Compile Include="Modelos\Entidades\Prestamo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\BuscarClientesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\BuscarClientesView.Designer.cs">
+      <DependentUpon>BuscarClientesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\BuscarLibroView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\BuscarLibroView.Designer.cs">
+      <DependentUpon>BuscarLibroView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\ClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +151,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\BuscarClientesView.resx">
+      <DependentUpon>BuscarClientesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\BuscarLibroView.resx">
+      <DependentUpon>BuscarLibroView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>

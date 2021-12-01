@@ -64,6 +64,29 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             return dt;
         }
+
+        public DataTable GetLibroPorNombre(string titulo)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM LIBRO WHERE LIKE ('%" + titulo + "%')"); 
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                SqlDataReader dr = comando.ExecuteReader();
+                dt.Load(dr);
+                MiConexion.Close();
+            }
+            catch (Exception)
+            {
+                MiConexion.Close();
+
+            }
+            return dt;
+        }
         public bool ActualizarLibro(Libro libro)
         {
             bool modifico = false;

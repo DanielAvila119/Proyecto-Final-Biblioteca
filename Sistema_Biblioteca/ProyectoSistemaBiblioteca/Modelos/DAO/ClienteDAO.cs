@@ -55,7 +55,27 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             catch (Exception)
             {
-
+            }
+            return dt;
+        }
+        public DataTable GetClientePorNombre(string nombre)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM CLIENTE WHERE LIKE ('%" + nombre +"%')");
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                SqlDataReader dr = comando.ExecuteReader();
+                dt.Load(dr);
+                MiConexion.Close();
+            }
+            catch (Exception)
+            {
+                MiConexion.Close();
 
             }
             return dt;
