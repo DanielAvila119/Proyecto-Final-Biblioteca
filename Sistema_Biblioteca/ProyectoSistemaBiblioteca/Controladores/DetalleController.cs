@@ -50,14 +50,16 @@ namespace ProyectoSistemaBiblioteca.Controladores
 
         private void PrestamodateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            //DateTime FechaPrestamo = ;
-            //DateTime FechaDevolucion;
-            //int diaretraso;
-            //decimal multa;
-            //if (FechaPrestamo > FechaDevolucion)
-            //{
-
-            //}
+            DateTime FechaPrestamo = vista.PrestamodateTimePicker1.Value.Date;
+            DateTime FechaDevolucion = vista.DevoluciondateTimePicker2.Value.Date;
+            int diaretraso;
+            decimal multa;
+            decimal cobro = 25;
+            if (FechaPrestamo > FechaDevolucion)
+            {
+                multa = diaretraso * cobro;
+                
+            }
         }
 
         //        Dim fecha_devolucion As Date = dtp_entrega.Value.Date
