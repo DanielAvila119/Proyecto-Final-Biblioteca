@@ -15,7 +15,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
         SqlCommand comando2 = new SqlCommand();
         
 
-        public bool InsertarNuevoDetallePrestamo(Detalle detalle, List<DetalleFactura> detalleFactura)
+        public bool InsertarNuevoDetallePrestamo(Detalle detalle, List<Prestamo> prestamo)
         {
             bool inserto = false;
             MiConexion.Close();
@@ -48,16 +48,16 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
 
                 int IdFactura = Convert.ToInt32(comando.ExecuteScalar());
 
-                foreach (var item in detalleFactura)
+                foreach (var item in prestamo)
                 {
                     comando.Transaction = transaction;
                     comando.CommandType = System.Data.CommandType.Text;
                     comando.CommandText = sqlD.ToString();
-                    comando.Parameters.Add("@IdFactura", SqlDbType.Int).Value = IdFactura;
-                    comando.Parameters.Add("@IdProducto", SqlDbType.Int).Value = item.IdProducto;
-                    comando.Parameters.Add("@Cantidad", SqlDbType.Int).Value = item.Cantidad;
-                    comando.Parameters.Add("@Precio", SqlDbType.Decimal).Value = item.Precio;
-                    comando.Parameters.Add("@TotalDetalle", SqlDbType.Decimal).Value = item.Total;
+                    comando.Parameters.Add("@FechaPrestamo", SqlDbType.Int).Value = prestamo.;
+                    comando.Parameters.Add("@FechaEntrega", SqlDbType.Int).Value = item;
+                    comando.Parameters.Add("@FechaDevolucion", SqlDbType.Int).Value = item.Cantidad;
+                    comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = item.Precio;
+                    comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = item.Total;
                     comando.ExecuteNonQuery();
                 }
                 transaction.Commit();
@@ -71,5 +71,9 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             return inserto;
         }
 
+        internal static bool InsertarNuevaFactura(Detalle detalle)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

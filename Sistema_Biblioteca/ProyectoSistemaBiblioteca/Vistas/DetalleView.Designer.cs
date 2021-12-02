@@ -29,17 +29,15 @@ namespace ProyectoSistemaBiblioteca.Vistas
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_BuscarLibro = new System.Windows.Forms.Button();
             this.txt_NombreLibro = new System.Windows.Forms.TextBox();
             this.txt_IdLibro = new System.Windows.Forms.TextBox();
-            this.txt_IdPrestamo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
-            this.txt_ID = new System.Windows.Forms.TextBox();
+            this.txt_IDCliente = new System.Windows.Forms.TextBox();
             this.btn_BuscarCliente = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,21 +53,13 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_IdPrestamo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
             // 
             // label2
             // 
@@ -84,7 +74,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(147, 72);
+            this.label3.Location = new System.Drawing.Point(239, 70);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 16);
@@ -111,7 +101,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_BuscarLibro
             // 
-            this.btn_BuscarLibro.Location = new System.Drawing.Point(626, 22);
+            this.btn_BuscarLibro.Location = new System.Drawing.Point(629, 22);
             this.btn_BuscarLibro.Name = "btn_BuscarLibro";
             this.btn_BuscarLibro.Size = new System.Drawing.Size(34, 30);
             this.btn_BuscarLibro.TabIndex = 6;
@@ -120,7 +110,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_NombreLibro
             // 
-            this.txt_NombreLibro.Location = new System.Drawing.Point(285, 72);
+            this.txt_NombreLibro.Location = new System.Drawing.Point(416, 70);
             this.txt_NombreLibro.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NombreLibro.Name = "txt_NombreLibro";
             this.txt_NombreLibro.Size = new System.Drawing.Size(277, 22);
@@ -134,18 +124,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_IdLibro.Size = new System.Drawing.Size(194, 22);
             this.txt_IdLibro.TabIndex = 4;
             // 
-            // txt_IdPrestamo
-            // 
-            this.txt_IdPrestamo.Location = new System.Drawing.Point(117, 34);
-            this.txt_IdPrestamo.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_IdPrestamo.Name = "txt_IdPrestamo";
-            this.txt_IdPrestamo.Size = new System.Drawing.Size(91, 22);
-            this.txt_IdPrestamo.TabIndex = 3;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txt_Nombre);
-            this.groupBox2.Controls.Add(this.txt_ID);
+            this.groupBox2.Controls.Add(this.txt_IDCliente);
             this.groupBox2.Controls.Add(this.btn_BuscarCliente);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -164,13 +146,13 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_Nombre.Size = new System.Drawing.Size(194, 22);
             this.txt_Nombre.TabIndex = 9;
             // 
-            // txt_ID
+            // txt_IDCliente
             // 
-            this.txt_ID.Location = new System.Drawing.Point(117, 22);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(91, 22);
-            this.txt_ID.TabIndex = 8;
+            this.txt_IDCliente.Location = new System.Drawing.Point(117, 22);
+            this.txt_IDCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_IDCliente.Name = "txt_IDCliente";
+            this.txt_IDCliente.Size = new System.Drawing.Size(91, 22);
+            this.txt_IDCliente.TabIndex = 8;
             // 
             // btn_BuscarCliente
             // 
@@ -315,6 +297,24 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
+            // 
+            // txt_IdPrestamo
+            // 
+            this.txt_IdPrestamo.Location = new System.Drawing.Point(117, 34);
+            this.txt_IdPrestamo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_IdPrestamo.Name = "txt_IdPrestamo";
+            this.txt_IdPrestamo.Size = new System.Drawing.Size(91, 22);
+            this.txt_IdPrestamo.TabIndex = 3;
+            // 
             // DetalleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -343,16 +343,11 @@ namespace ProyectoSistemaBiblioteca.Vistas
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_IdPrestamo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker DevoluciondateTimePicker2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker PrestamodateTimePicker1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -364,11 +359,15 @@ namespace ProyectoSistemaBiblioteca.Vistas
         public System.Windows.Forms.Button btn_Cancelar;
         public System.Windows.Forms.Button btn_BuscarCliente;
         public System.Windows.Forms.TextBox txt_Nombre;
-        public System.Windows.Forms.TextBox txt_ID;
+        public System.Windows.Forms.TextBox txt_IDCliente;
         public System.Windows.Forms.Button btn_BuscarLibro;
         public System.Windows.Forms.TextBox txt_NombreLibro;
         public System.Windows.Forms.TextBox txt_IdLibro;
         public System.Windows.Forms.TextBox txt_Multa;
         public System.Windows.Forms.TextBox txt_Cobro;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txt_IdPrestamo;
+        public System.Windows.Forms.DateTimePicker DevoluciondateTimePicker2;
+        public System.Windows.Forms.DateTimePicker PrestamodateTimePicker1;
     }
 }

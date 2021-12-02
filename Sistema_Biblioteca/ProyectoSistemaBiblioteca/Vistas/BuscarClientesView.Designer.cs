@@ -99,6 +99,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.ClientesdataGridView);
             this.Name = "BuscarClientesView";
             this.Text = "BuscarClientesView";
+            this.Load += new System.EventHandler(this.BuscarClientesView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ClientesdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

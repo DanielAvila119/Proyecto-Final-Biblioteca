@@ -50,5 +50,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
         {
             this.Close();
         }
+
+        private void BuscarClientesView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

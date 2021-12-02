@@ -17,7 +17,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.Entidades
         public DateTime Prestamo { get; set; }
         public DateTime Devolucion { get; set; }
         public decimal Cobro { get; set; }
-        public string Multa { get; set; }
+        public decimal Multa { get; set; }
 
     }
 

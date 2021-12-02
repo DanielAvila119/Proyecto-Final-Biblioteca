@@ -61,6 +61,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.NombreLibroTextBox.Name = "NombreLibroTextBox";
             this.NombreLibroTextBox.Size = new System.Drawing.Size(219, 20);
             this.NombreLibroTextBox.TabIndex = 11;
+            this.NombreLibroTextBox.TextChanged += new System.EventHandler(this.NombreLibroTextBox_TextChanged);
             // 
             // label1
             // 
@@ -96,7 +97,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.LibrosdataGridView);
             this.Name = "BuscarLibroView";
             this.Text = "BuscarLibroView";
-            
+            this.Load += new System.EventHandler(this.BuscarLibroView_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.LibrosdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

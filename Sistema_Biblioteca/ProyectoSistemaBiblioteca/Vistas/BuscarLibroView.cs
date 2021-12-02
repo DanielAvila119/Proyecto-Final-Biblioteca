@@ -52,6 +52,14 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Close();
         }
 
-       
+        private void BuscarLibroView_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombreLibroTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
