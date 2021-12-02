@@ -353,8 +353,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
         private System.Windows.Forms.DateTimePicker DevoluciondateTimePicker2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker PrestamodateTimePicker1;
-        private System.Windows.Forms.TextBox txt_Multa;
-        private System.Windows.Forms.TextBox txt_Cobro;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -370,5 +368,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         public System.Windows.Forms.Button btn_BuscarLibro;
         public System.Windows.Forms.TextBox txt_NombreLibro;
         public System.Windows.Forms.TextBox txt_IdLibro;
+        public System.Windows.Forms.TextBox txt_Multa;
+        public System.Windows.Forms.TextBox txt_Cobro;
     }
 }
