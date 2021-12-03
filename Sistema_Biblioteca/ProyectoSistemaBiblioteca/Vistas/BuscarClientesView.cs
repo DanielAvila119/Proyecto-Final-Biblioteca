@@ -29,8 +29,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
 
         private void NombreClienteTextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            //ClientesdataGridView.DataSource = clienteDAO.GetClientePorNombre(NombreClienteTextBox.Text);
-
+            ClientesdataGridView.DataSource = clienteDAO.GetClientePorNombre(NombreClienteTextBox.Text);
         }
 
         private void Aceptarbutton_Click(object sender, EventArgs e)
@@ -51,9 +50,14 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Close();
         }
 
-        private void BuscarClientesView_Load(object sender, EventArgs e)
+        private void NombreClienteTextBox_TextChanged(object sender, EventArgs e)
         {
-            ClientesdataGridView.DataSource = clienteDAO.GetClientePorNombre(NombreClienteTextBox.Text);
+
         }
+
+        //private void BuscarClientesView_Load(object sender, EventArgs e)
+        //{
+        //    ClientesdataGridView.DataSource = clienteDAO.GetClientePorNombre(NombreClienteTextBox.Text);
+        //}
     }
 }

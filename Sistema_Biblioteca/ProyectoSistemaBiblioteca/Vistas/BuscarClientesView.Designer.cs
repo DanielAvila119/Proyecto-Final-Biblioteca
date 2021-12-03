@@ -45,7 +45,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ClientesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientesdataGridView.Location = new System.Drawing.Point(-6, 172);
             this.ClientesdataGridView.Name = "ClientesdataGridView";
-            this.ClientesdataGridView.Size = new System.Drawing.Size(414, 98);
+            this.ClientesdataGridView.Size = new System.Drawing.Size(417, 98);
             this.ClientesdataGridView.TabIndex = 0;
             // 
             // Cancelarbutton
@@ -74,6 +74,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.NombreClienteTextBox.Name = "NombreClienteTextBox";
             this.NombreClienteTextBox.Size = new System.Drawing.Size(219, 20);
             this.NombreClienteTextBox.TabIndex = 6;
+            this.NombreClienteTextBox.TextChanged += new System.EventHandler(this.NombreClienteTextBox_TextChanged);
             this.NombreClienteTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NombreClienteTextBox_KeyUp);
             // 
             // label1
@@ -99,7 +100,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.Controls.Add(this.ClientesdataGridView);
             this.Name = "BuscarClientesView";
             this.Text = "BuscarClientesView";
-            this.Load += new System.EventHandler(this.BuscarClientesView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ClientesdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -107,11 +107,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView ClientesdataGridView;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button Cancelarbutton;
         public System.Windows.Forms.Button Aceptarbutton;
         public System.Windows.Forms.TextBox NombreClienteTextBox;
+        public System.Windows.Forms.DataGridView ClientesdataGridView;
     }
 }

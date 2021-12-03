@@ -27,12 +27,13 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             {
                 StringBuilder sqlD = new StringBuilder();
                 sqlD.Append(" INSERT INTO DETALLEPRESTAMO ");
-                sqlD.Append(" VALUES (@IdLibro, @NombreLibro, @IdCliente, @NombreCliente, @FechaEntrega, @FechaDevolucion, @Cobro, @Multa); ");
+                sqlD.Append(" VALUES (@IdPrestamo, @IdLibro, @NombreLibro, @IdCliente, @NombreCliente, @FechaEntrega, @FechaDevolucion, @Cobro, @Multa); ");
                 sqlD.Append(" SELECT SCOPE_IDENTITY() ");
 
                 comando.Transaction = transaction;
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = sqlD.ToString();
+                comando.Parameters.Add("@IdPrestamo", SqlDbType.Int).Value = detalle.IdPrestamo;
                 comando.Parameters.Add("@IdLibro", SqlDbType.Int).Value = detalle.IdLibro;
                 comando.Parameters.Add("@NombreLibro", SqlDbType.NVarChar, 100).Value=detalle.NombreLibro;
                 comando.Parameters.Add("@IdCliente", SqlDbType.Int).Value = detalle.IdCliente;
@@ -42,20 +43,20 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 comando.Parameters.Add("@Cobro", SqlDbType.Decimal).Value = detalle.Cobro;
                 comando.Parameters.Add("@Multa", SqlDbType.Decimal).Value = detalle.Multa;
 
-                //int IdPrestamo = Convert.ToInt32(comando.ExecuteScalar());
+                int IdPrestamo = Convert.ToInt32(comando.ExecuteScalar());
 
-                //foreach (var item in prestamo)
-                //{
-                //    comando.Transaction = transaction;
-                //    comando.CommandType = System.Data.CommandType.Text;
-                //    comando.CommandText = sqlD.ToString();
-                //    comando.Parameters.Add("@FechaPrestamo", SqlDbType.Date).Value = item.FechaPrestamo;
-                //    comando.Parameters.Add("@FechaEntrega", SqlDbType.Date).Value = item.FechaEntrega;
-                //    comando.Parameters.Add("@FechaDevolucion", SqlDbType.Date).Value = item.FechaDevolucion;
-                //    comando.Parameters.Add("@IdEjemplar", SqlDbType.Int).Value = item.IdEjemplar;
-                //    comando.Parameters.Add("@IdCliente", SqlDbType.Int).Value = item.IdCliente;
-                //    comando.ExecuteNonQuery();
-                //}
+                foreach (var item in prestamo)
+                {
+                    comando.Transaction = transaction;
+                    comando.CommandType = System.Data.CommandType.Text;
+                    comando.CommandText = sqlD.ToString();
+                    comando.Parameters.Add("@FechaPrestamo", SqlDbType.Date).Value = item.FechaPrestamo;
+                    comando.Parameters.Add("@FechaEntrega", SqlDbType.Date).Value = item.FechaEntrega;
+                    comando.Parameters.Add("@FechaDevolucion", SqlDbType.Date).Value = item.FechaDevolucion;
+                    comando.Parameters.Add("@IdEjemplar", SqlDbType.Int).Value = item.IdEjemplar;
+                    comando.Parameters.Add("@IdCliente", SqlDbType.Int).Value = item.IdCliente;
+                    comando.ExecuteNonQuery();
+                }
                 transaction.Commit();
                 inserto = true;
                 MiConexion.Close();
@@ -66,6 +67,26 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 transaction.Rollback();
             }
             return inserto;
+        }
+        public DataTable GetDetalle()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM DETALLEPRESTAMO ");
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                SqlDataReader dr = comando.ExecuteReader();
+                dt.Load(dr);
+                MiConexion.Close();
+            }
+            catch (Exception)
+            {
+            }
+            return dt;
         }
     }
 }

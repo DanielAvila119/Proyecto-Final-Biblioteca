@@ -1,4 +1,6 @@
 ﻿using ProyectoSistemaBiblioteca.Controladores;
+using ProyectoSistemaBiblioteca.Modelos.DAO;
+using ProyectoSistemaBiblioteca.Modelos.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +17,26 @@ namespace ProyectoSistemaBiblioteca.Vistas
     {
         public DetalleView()
         {
-            InitializeComponent();
-            DetalleController controlador = new DetalleController(this);
+            
+        InitializeComponent();
+        DetalleController controlador = new DetalleController(this);
+        }
+        PrestamoDAO prestamoDAO = new PrestamoDAO();
+        public Prestamo _prestamo = new Prestamo();
+
+        private void DetalleView_Load(object sender, EventArgs e)
+        {
+            DetalledataGridView.DataSource = prestamoDAO.GetPrestamo();
         }
 
-      
+        private void EntregadateTimePicker1_KeyUp(object sender, EventArgs e)
+        {
+            DetalledataGridView.DataSource = prestamoDAO.GetPrestamoPorID(EntregadateTimePicker1.Text);
+        }
 
-       
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

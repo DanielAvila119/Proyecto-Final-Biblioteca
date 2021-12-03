@@ -63,8 +63,43 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             return dt;
         }
-        public bool ActualizarPrestamo(Prestamo prestamo, Cliente cliente, Ejemplar ejemplar)
+        public Prestamo GetPrestamoPorID(string id)
         {
+            Prestamo prestamo = new Prestamo();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM PRESTAMO ");
+                sql.Append(" WHERE ID = @Id; ");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    prestamo.Id = (int)dr["ID"];
+                    prestamo.FechaPrestamo = (DateTime)dr["FECHAPRESTAMO"];
+                    prestamo.FechaEntrega = (DateTime)dr["FECHAENTREGA"];
+                    prestamo.FechaDevolucion = (DateTime)dr["FECHADEVOLUCION"];
+                    prestamo.IdCliente = (int)dr["IDCLIENTE"];
+                    prestamo.IdEjemplar = (int)dr["IDEJEMPLAR"];
+                }
+
+                MiConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MiConexion.Close();
+            }
+            return prestamo;
+        }
+            public bool ActualizarPrestamo(Prestamo prestamo, Cliente cliente, Ejemplar ejemplar)
+            {
             bool modifico = false;
             try
             {
@@ -93,7 +128,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 return modifico;
             }
             return modifico;
-        }
+            }
         public bool EliminarPrestamo(int id)
         {
             bool elimino = false;

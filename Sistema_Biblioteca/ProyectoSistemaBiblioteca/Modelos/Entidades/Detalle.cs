@@ -9,6 +9,7 @@ namespace ProyectoSistemaBiblioteca.Modelos.Entidades
     public class Detalle
     {
         public int Id { get; set; }
+        public int IdPrestamo { get; set; }
         public int IdLibro { get; set; }
         public string NombreLibro { get; set; }
         public int IdCliente { get; set; }
