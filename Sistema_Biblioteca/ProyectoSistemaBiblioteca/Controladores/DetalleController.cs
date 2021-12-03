@@ -111,10 +111,13 @@ namespace ProyectoSistemaBiblioteca.Controladores
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
             Detalle detalle = new Detalle();
+            detalle.IdPrestamo = prestamo.Id;
             detalle.IdLibro = libro.Id;
             detalle.NombreLibro = libro.Titulo;
             detalle.IdCliente = cliente.Id;
-            detalle.NombreCliente =cliente.Nombre;
+            detalle.NombreCliente = cliente.Nombre;
+            detalle.FechaEntrega = prestamo.FechaEntrega;
+            detalle.FechaDevolucion = prestamo.FechaDevolucion;
             detalle.Cobro = Convert.ToDecimal(vista.txt_Cobro.Text);
             detalle.Multa = Convert.ToDecimal(vista.txt_Multa.Text);
             
