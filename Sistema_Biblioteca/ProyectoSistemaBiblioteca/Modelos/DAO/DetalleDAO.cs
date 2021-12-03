@@ -68,6 +68,8 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             return inserto;
         }
+
+
         public DataTable GetDetalle()
         {
             DataTable dt = new DataTable();

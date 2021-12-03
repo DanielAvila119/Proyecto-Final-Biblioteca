@@ -63,11 +63,15 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 prestamo = prestamoDAO.GetPrestamoPorID(vista.txt_IdPrestamo.Text);
 
                 vista.EntregadateTimePicker1.Value = prestamo.FechaEntrega;
+                vista.DevoluciondateTimePicker2.Value = prestamo.FechaDevolucion;
+                vista.DetalledataGridView.DataSource = detalleDAO.GetDetalle();
+
             }
             else
             {
                 prestamo = null;
-                //vista.EntregadateTimePicker1.Value;
+                vista.EntregadateTimePicker1.ResetText();
+                vista.DevoluciondateTimePicker2.ResetText();
             }
         }
 

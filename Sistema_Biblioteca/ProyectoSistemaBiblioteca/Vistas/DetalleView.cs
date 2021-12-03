@@ -34,9 +34,11 @@ namespace ProyectoSistemaBiblioteca.Vistas
             DetalledataGridView.DataSource = prestamoDAO.GetPrestamoPorID(EntregadateTimePicker1.Text);
         }
 
-        private void btn_Guardar_Click(object sender, EventArgs e)
-        {
+       
 
+        private void DevoluciondateTimePicker2_KeyUp(object sender, EventArgs e)
+        {
+            DetalledataGridView.DataSource = prestamoDAO.GetPrestamoPorID(DevoluciondateTimePicker2.Text);
         }
     }
 }

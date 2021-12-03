@@ -268,6 +268,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.DevoluciondateTimePicker2.Name = "DevoluciondateTimePicker2";
             this.DevoluciondateTimePicker2.Size = new System.Drawing.Size(274, 22);
             this.DevoluciondateTimePicker2.TabIndex = 9;
+            this.DevoluciondateTimePicker2.ValueChanged += new System.EventHandler(this.DevoluciondateTimePicker2_KeyUp);
             // 
             // label9
             // 
@@ -352,7 +353,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_Guardar.TabIndex = 7;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
-            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
+          
             // 
             // btn_Cancelar
             // 
