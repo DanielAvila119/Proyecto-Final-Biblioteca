@@ -64,14 +64,48 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             return dt;
         }
+        public Libro GetLibroPorID(string id)
+        {
+            Libro libro = new Libro();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM LIBRO ");
+                sql.Append(" WHERE ID = @Id; ");
 
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    libro.Id = (int)dr["ID"];
+                    libro.Titulo = (string)dr["TITULO"];
+                    libro.Autor = (string)dr["AUTOR"];
+                    libro.Editorial = (string)dr["EDITORIAL"];
+                    libro.NumeroEdicion = (string)dr["NUMEROEDICION"];
+                    libro.NumeroEjemplares = (string)dr["NUMEROEJEMPLARES"];
+                }
+
+                MiConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MiConexion.Close();
+            }
+            return libro;
+        }
         public DataTable GetLibroPorNombre(string titulo)
         {
             DataTable dt = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM LIBRO WHERE LIKE ('%" + titulo + "%')"); 
+                sql.Append(" SELECT * FROM LIBRO WHERE LIKE ('%" + titulo + "%') "); 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;

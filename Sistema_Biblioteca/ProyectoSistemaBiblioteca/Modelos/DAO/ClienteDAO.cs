@@ -58,13 +58,48 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
             }
             return dt;
         }
+        public Cliente GetClientePorID(string id)
+        {
+            Cliente cliente = new Cliente();
+            try
+            {
+                StringBuilder sql = new StringBuilder();
+                sql.Append(" SELECT * FROM CLIENTE ");
+                sql.Append(" WHERE ID = @Id; ");
+
+                comando.Connection = MiConexion;
+                MiConexion.Open();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = sql.ToString();
+                comando.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                SqlDataReader dr = comando.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    cliente.Id = (int)dr["ID"];
+                    cliente.Nombre = (string)dr["NOMBRE"];
+                    cliente.Direccion = (string)dr["DIRECCION"];
+                    cliente.Telefono = (string)dr["TELEFONO"];
+                    cliente.Email = (string)dr["EMAIL"];
+                    cliente.Ocupacion = (string)dr["OCUPACION"];
+                }
+
+                MiConexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MiConexion.Close();
+            }
+            return cliente;
+        }
         public DataTable GetClientePorNombre(string nombre)
         {
             DataTable dt = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM CLIENTE WHERE LIKE ('%" + nombre +"%')");
+                sql.Append(" SELECT * FROM CLIENTE WHERE LIKE ('%" + nombre + "%') ");
                 comando.Connection = MiConexion;
                 MiConexion.Open();
                 comando.CommandType = System.Data.CommandType.Text;

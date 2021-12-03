@@ -33,20 +33,45 @@ namespace ProyectoSistemaBiblioteca.Controladores
         public DetalleController(DetalleView view)
         {
             vista = view;
-            vista.Load += new EventHandler(Load);
-            vista.txt_IdPrestamo.KeyPress += txt_IdPrestamo_KeyPress;
-            vista.btn_BuscarLibro.Click += btn_BuscarLibro_Click;
+            //vista.Load += new EventHandler(Load);
+            //vista.txt_IdPrestamo.KeyPress += txt_IdPrestamo_KeyPress;
+            vista.btn_BuscarLibro.Click += Btn_BuscarLibro_Click;
             vista.txt_IdLibro.KeyPress += txt_IdLibro_KeyPress;
-            vista.txt_NombreLibro.KeyPress += Txt_NombreLibro_KeyPress;
+            //vista.txt_NombreLibro.KeyPress += Txt_NombreLibro_KeyPress;
             vista.txt_IDCliente.KeyPress += Txt_IDCliente_KeyPress;
-            vista.txt_Nombre.KeyPress += Txt_Nombre_KeyPress;
+            //vista.txt_Nombre.KeyPress += Txt_Nombre_KeyPress;
             vista.btn_BuscarCliente.Click += Btn_BuscarCliente_Click;
             vista.btn_Guardar.Click += Btn_Guardar_Click;
-            vista.btn_Cancelar.Click += Btn_Cancelar_Click;
-            vista.txt_Multa.KeyPress += Txt_Multa_KeyPress;
-            vista.EntregadateTimePicker1.CloseUp += EntregadateTimePicker1_CloseUp;
-            vista.txt_Cobro.KeyPress += Txt_Cobro_KeyPress;
+            //vista.btn_Cancelar.Click += Btn_Cancelar_Click;
+            //vista.txt_Multa.KeyPress += Txt_Multa_KeyPress;
+            vista.EntregadateTimePicker1.KeyPress += EntregadateTimePicker1_KeyPress;
+            //vista.txt_Cobro.KeyPress += Txt_Cobro_KeyPress;
             
+        }
+
+        private void EntregadateTimePicker1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            DateTime FechaEntrega = vista.EntregadateTimePicker1.Value.Date;
+            DateTime FechaDevolucion = vista.DevoluciondateTimePicker2.Value.Date;
+            decimal multa;
+            decimal cobro = 25;
+            if (FechaDevolucion > FechaEntrega)
+            {
+                multa = cobro + 5;
+                vista.DetalledataGridView.DataSource = null;
+                vista.DetalledataGridView.DataSource = listaDetallePrestamo;
+
+                vista.txt_Multa.Text = multa.ToString("N2");
+                vista.txt_Cobro.Text = cobro.ToString("N2");
+            }
+            else
+            {
+                multa = 0;
+                vista.txt_Multa.Text = multa.ToString("N2");
+                vista.txt_Cobro.Text = cobro.ToString("N2");
+            }
+
+
         }
 
         private void Txt_Cobro_KeyPress(object sender, KeyPressEventArgs e)
@@ -54,24 +79,24 @@ namespace ProyectoSistemaBiblioteca.Controladores
             vista.txt_Cobro.Text = Convert.ToDecimal(cobro).ToString();
         }
 
-        private void EntregadateTimePicker1_CloseUp(object sender, EventArgs e)
-        {
+        //private void EntregadateTimePicker1_CloseUp(object sender, EventArgs e)
+        //{
 
-            DateTime FechaEntrega = vista.EntregadateTimePicker1.Value.Date;
-            DateTime FechaDevolucion = vista.DevoluciondateTimePicker2.Value.Date;
-            decimal multa;
-            decimal cobro = 25 ;
-            if (FechaDevolucion > FechaEntrega)
-            {
-                multa = cobro + 5;
-                
-            }
-            else
-            {
-                multa = 0;
-            }
-            
-        }
+        //    DateTime FechaEntrega = vista.EntregadateTimePicker1.Value.Date;
+        //    DateTime FechaDevolucion = vista.DevoluciondateTimePicker2.Value.Date;
+        //    decimal multa;
+        //    decimal cobro = 25 ;
+        //    if (FechaDevolucion > FechaEntrega)
+        //    {
+        //        multa = cobro + 5;
+
+        //    }
+        //    else
+        //    {
+        //        multa = 0;
+        //    }
+
+        //}
 
         //        Dim fecha_devolucion As Date = dtp_entrega.Value.Date
         //If fecha_devolucion > fecha_entrega Then
@@ -98,13 +123,13 @@ namespace ProyectoSistemaBiblioteca.Controladores
 
         private void Txt_Multa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            vista.txt_Multa.Text = Convert.ToDecimal( multa).ToString();
+            vista.txt_Multa.Text = Convert.ToDecimal(multa).ToString();
         }
 
-        private void Btn_Cancelar_Click(object sender, EventArgs e)
-        {
-            
-        }
+        //private void Btn_Cancelar_Click(object sender, EventArgs e)
+        //{
+
+        //}
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
@@ -128,12 +153,6 @@ namespace ProyectoSistemaBiblioteca.Controladores
             }
         }
 
-
-        private void Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void Btn_BuscarCliente_Click(object sender, EventArgs e)
         {
             BuscarClientesView form = new BuscarClientesView();
@@ -153,37 +172,55 @@ namespace ProyectoSistemaBiblioteca.Controladores
             vista.txt_NombreLibro.Text = libro.Titulo;
         }
 
-        private void Txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
+        //private void Txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        private void Txt_IDCliente_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                cliente = clienteDAO.GetClientePorID(vista.txt_IDCliente.Text);
+
+                vista.txt_Nombre.Text = cliente.Nombre;
+            }
+            else
+            {
+                cliente = null;
+                vista.txt_Nombre.Clear();
+            }
         }
 
-        private void Txt_IDCliente_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Txt_NombreLibro_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        //private void Txt_NombreLibro_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         private void txt_IdLibro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            throw new NotImplementedException();
-        }
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                libro = libroDAO.GetLibroPorID(vista.txt_IdLibro.Text);
 
-        private void btn_BuscarLibro_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
+                vista.txt_NombreLibro.Text = libro.Titulo;
+            }
+            else
+            {
+                cliente = null;
+                vista.txt_Nombre.Clear();
+            }
         }
+    }
 
-        private void txt_IdPrestamo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
-        
+
+        //private void txt_IdPrestamo_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+
 
         //private void CantidadTextBox_KeyPress(object sender, KeyPressEventArgs e)
         //{
@@ -248,7 +285,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
         //    }
         //}
 
-      
 
-    }
+
+    
 }
