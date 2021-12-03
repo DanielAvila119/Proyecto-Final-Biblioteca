@@ -55,6 +55,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_diasretraso = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,9 +103,9 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_BuscarLibro
             // 
-            this.btn_BuscarLibro.Location = new System.Drawing.Point(629, 22);
+            this.btn_BuscarLibro.Location = new System.Drawing.Point(626, 22);
             this.btn_BuscarLibro.Name = "btn_BuscarLibro";
-            this.btn_BuscarLibro.Size = new System.Drawing.Size(34, 30);
+            this.btn_BuscarLibro.Size = new System.Drawing.Size(34, 26);
             this.btn_BuscarLibro.TabIndex = 6;
             this.btn_BuscarLibro.Text = "...";
             this.btn_BuscarLibro.UseVisualStyleBackColor = true;
@@ -151,14 +153,14 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(13, 129);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(581, 62);
+            this.groupBox2.Size = new System.Drawing.Size(809, 62);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cliente";
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(368, 22);
+            this.txt_Nombre.Location = new System.Drawing.Point(454, 22);
             this.txt_Nombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(194, 22);
@@ -166,7 +168,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // txt_IDCliente
             // 
-            this.txt_IDCliente.Location = new System.Drawing.Point(117, 22);
+            this.txt_IDCliente.Location = new System.Drawing.Point(206, 23);
             this.txt_IDCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txt_IDCliente.Name = "txt_IDCliente";
             this.txt_IDCliente.Size = new System.Drawing.Size(91, 22);
@@ -174,9 +176,9 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_BuscarCliente
             // 
-            this.btn_BuscarCliente.Location = new System.Drawing.Point(225, 15);
+            this.btn_BuscarCliente.Location = new System.Drawing.Point(304, 21);
             this.btn_BuscarCliente.Name = "btn_BuscarCliente";
-            this.btn_BuscarCliente.Size = new System.Drawing.Size(34, 30);
+            this.btn_BuscarCliente.Size = new System.Drawing.Size(34, 25);
             this.btn_BuscarCliente.TabIndex = 7;
             this.btn_BuscarCliente.Text = "...";
             this.btn_BuscarCliente.UseVisualStyleBackColor = true;
@@ -184,7 +186,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(282, 22);
+            this.label5.Location = new System.Drawing.Point(383, 26);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
@@ -194,7 +196,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 22);
+            this.label4.Location = new System.Drawing.Point(175, 25);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 16);
@@ -203,6 +205,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_diasretraso);
+            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.DevoluciondateTimePicker2);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.EntregadateTimePicker1);
@@ -213,14 +217,14 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(13, 197);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(810, 109);
+            this.groupBox3.Size = new System.Drawing.Size(693, 134);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cobro";
             // 
             // DevoluciondateTimePicker2
             // 
-            this.DevoluciondateTimePicker2.Location = new System.Drawing.Point(519, 21);
+            this.DevoluciondateTimePicker2.Location = new System.Drawing.Point(386, 51);
             this.DevoluciondateTimePicker2.Name = "DevoluciondateTimePicker2";
             this.DevoluciondateTimePicker2.Size = new System.Drawing.Size(274, 22);
             this.DevoluciondateTimePicker2.TabIndex = 9;
@@ -228,63 +232,65 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(413, 21);
+            this.label9.Location = new System.Drawing.Point(422, 28);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 16);
+            this.label9.Size = new System.Drawing.Size(188, 16);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Devolucion";
+            this.label9.Text = "Fecha que devolvió Libro:";
             // 
             // EntregadateTimePicker1
             // 
-            this.EntregadateTimePicker1.Location = new System.Drawing.Point(107, 21);
+            this.EntregadateTimePicker1.Location = new System.Drawing.Point(32, 51);
             this.EntregadateTimePicker1.Name = "EntregadateTimePicker1";
             this.EntregadateTimePicker1.Size = new System.Drawing.Size(274, 22);
             this.EntregadateTimePicker1.TabIndex = 7;
             // 
             // txt_Multa
             // 
-            this.txt_Multa.Location = new System.Drawing.Point(107, 61);
+            this.txt_Multa.Location = new System.Drawing.Point(566, 95);
             this.txt_Multa.Name = "txt_Multa";
+            this.txt_Multa.ReadOnly = true;
             this.txt_Multa.Size = new System.Drawing.Size(109, 22);
             this.txt_Multa.TabIndex = 6;
             // 
             // txt_Cobro
             // 
-            this.txt_Cobro.Location = new System.Drawing.Point(519, 64);
+            this.txt_Cobro.Location = new System.Drawing.Point(386, 95);
             this.txt_Cobro.Name = "txt_Cobro";
+            this.txt_Cobro.ReadOnly = true;
             this.txt_Cobro.Size = new System.Drawing.Size(100, 22);
             this.txt_Cobro.TabIndex = 5;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(36, 61);
+            this.label8.Location = new System.Drawing.Point(514, 97);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 16);
+            this.label8.Size = new System.Drawing.Size(49, 16);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Multa";
+            this.label8.Text = "Multa:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(449, 67);
+            this.label7.Location = new System.Drawing.Point(264, 98);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 16);
+            this.label7.Size = new System.Drawing.Size(115, 16);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Cobro";
+            this.label7.Text = "Cobro por días:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 21);
+            this.label6.Location = new System.Drawing.Point(90, 28);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
+            this.label6.Size = new System.Drawing.Size(178, 16);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Entrega";
+            this.label6.Text = "Fecha Entrega  de Libro:";
             // 
             // DetalledataGridView
             // 
@@ -292,28 +298,45 @@ namespace ProyectoSistemaBiblioteca.Vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DetalledataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DetalledataGridView.Location = new System.Drawing.Point(2, 361);
+            this.DetalledataGridView.Location = new System.Drawing.Point(2, 337);
             this.DetalledataGridView.Name = "DetalledataGridView";
-            this.DetalledataGridView.Size = new System.Drawing.Size(833, 153);
+            this.DetalledataGridView.Size = new System.Drawing.Size(833, 177);
             this.DetalledataGridView.TabIndex = 6;
             // 
             // btn_Guardar
             // 
-            this.btn_Guardar.Location = new System.Drawing.Point(215, 312);
+            this.btn_Guardar.Location = new System.Drawing.Point(724, 227);
             this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.Size = new System.Drawing.Size(98, 43);
+            this.btn_Guardar.Size = new System.Drawing.Size(98, 32);
             this.btn_Guardar.TabIndex = 7;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(381, 312);
+            this.btn_Cancelar.Location = new System.Drawing.Point(724, 278);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(93, 43);
+            this.btn_Cancelar.Size = new System.Drawing.Size(98, 32);
             this.btn_Cancelar.TabIndex = 8;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(16, 97);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 16);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Días de retraso:";
+            // 
+            // txt_diasretraso
+            // 
+            this.txt_diasretraso.Location = new System.Drawing.Point(141, 95);
+            this.txt_diasretraso.Name = "txt_diasretraso";
+            this.txt_diasretraso.ReadOnly = true;
+            this.txt_diasretraso.Size = new System.Drawing.Size(100, 22);
+            this.txt_diasretraso.TabIndex = 11;
             // 
             // DetalleView
             // 
@@ -369,5 +392,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
         public System.Windows.Forms.TextBox txt_IdPrestamo;
         public System.Windows.Forms.DateTimePicker DevoluciondateTimePicker2;
         public System.Windows.Forms.DateTimePicker EntregadateTimePicker1;
+        public System.Windows.Forms.TextBox txt_diasretraso;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -44,25 +44,30 @@ namespace ProyectoSistemaBiblioteca.Controladores
             vista.btn_Guardar.Click += Btn_Guardar_Click;
             //vista.btn_Cancelar.Click += Btn_Cancelar_Click;
             //vista.txt_Multa.KeyPress += Txt_Multa_KeyPress;
-            vista.EntregadateTimePicker1.KeyPress += EntregadateTimePicker1_KeyPress;
+            //vista.EntregadateTimePicker1.CloseUp += EntregadateTimePicker1_CloseUp;
+            vista.DevoluciondateTimePicker2.CloseUp += DevoluciondateTimePicker2_CloseUp;
             //vista.txt_Cobro.KeyPress += Txt_Cobro_KeyPress;
             
         }
 
-        private void EntregadateTimePicker1_KeyPress(object sender, KeyPressEventArgs e)
+        private void DevoluciondateTimePicker2_CloseUp(object sender, EventArgs e)
         {
             DateTime FechaEntrega = vista.EntregadateTimePicker1.Value.Date;
             DateTime FechaDevolucion = vista.DevoluciondateTimePicker2.Value.Date;
             decimal multa;
-            decimal cobro = 25;
+            decimal cobro = 5;
             if (FechaDevolucion > FechaEntrega)
             {
-                multa = cobro + 5;
+                TimeSpan tspan = FechaDevolucion - FechaEntrega;
+                int dias = tspan.Days;
+                vista.txt_diasretraso.Text = dias.ToString();
+
+                multa = dias * cobro;
                 vista.DetalledataGridView.DataSource = null;
-                vista.DetalledataGridView.DataSource = listaDetallePrestamo;
 
                 vista.txt_Multa.Text = multa.ToString("N2");
                 vista.txt_Cobro.Text = cobro.ToString("N2");
+                
             }
             else
             {
@@ -70,6 +75,34 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 vista.txt_Multa.Text = multa.ToString("N2");
                 vista.txt_Cobro.Text = cobro.ToString("N2");
             }
+        }
+
+        //private void EntregadateTimePicker1_CloseUp(object sender, EventArgs e)
+        //{
+           
+        //}
+
+        private void EntregadateTimePicker1_CloseUp(object sender, KeyPressEventArgs e)
+        {
+            //DateTime FechaEntrega = vista.EntregadateTimePicker1.Value.Date;
+            //DateTime FechaDevolucion = vista.DevoluciondateTimePicker2.Value.Date;
+            //decimal multa;
+            //decimal cobro = 25;
+            //if (FechaDevolucion > FechaEntrega)
+            //{
+            //    multa = cobro + 5;
+            //    vista.DetalledataGridView.DataSource = null;
+            //    vista.DetalledataGridView.DataSource = listaDetallePrestamo;
+
+            //    vista.txt_Multa.Text = multa.ToString("N2");
+            //    vista.txt_Cobro.Text = cobro.ToString("N2");
+            //}
+            //else
+            //{
+            //    multa = 0;
+            //    vista.txt_Multa.Text = multa.ToString("N2");
+            //    vista.txt_Cobro.Text = cobro.ToString("N2");
+            //}
 
 
         }
