@@ -26,16 +26,16 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
 
             try
             {
-                StringBuilder sql = new StringBuilder();
-                sql.Append(" INSERT INTO DETALLEPRESTAMO ");
-                sql.Append(" VALUES (@IdPrestamo, @IdLibro, @NombreLibro, @IdCliente, @NombreCliente, @Prestamo, @Devolucion, @Cobro, @Multa); ");
-                sql.Append(" SELECT SCOPE_IDENTITY() ");
+                StringBuilder sqlD = new StringBuilder();
+                sqlD.Append(" INSERT INTO DETALLEPRESTAMO ");
+                sqlD.Append(" VALUES (@IdPrestamo, @IdLibro, @NombreLibro, @IdCliente, @NombreCliente, @Prestamo, @Devolucion, @Cobro, @Multa); ");
+                sqlD.Append(" SELECT SCOPE_IDENTITY() ");
 
                
 
                 comando.Transaction = transaction;
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = sql.ToString();
+                comando.CommandText = sqlD.ToString();
                 comando.Parameters.Add("@IdPrestamo", SqlDbType.DateTime).Value = detalle.IdPrestamo;
                 comando.Parameters.Add("@IdLibro", SqlDbType.Int).Value = detalle.IdLibro;
                 comando.Parameters.Add("@NombreLibro", SqlDbType.NVarChar,100).Value=detalle.NombreLibro;
@@ -46,18 +46,18 @@ namespace ProyectoSistemaBiblioteca.Modelos.DAO
                 comando.Parameters.Add("@Cobro", SqlDbType.Decimal).Value = detalle.Cobro;
                 comando.Parameters.Add("@Multa", SqlDbType.NVarChar, 50).Value = detalle.Multa;
 
-                int IdFactura = Convert.ToInt32(comando.ExecuteScalar());
+                int IdPrestamo = Convert.ToInt32(comando.ExecuteScalar());
 
                 foreach (var item in prestamo)
                 {
                     comando.Transaction = transaction;
                     comando.CommandType = System.Data.CommandType.Text;
                     comando.CommandText = sqlD.ToString();
-                    comando.Parameters.Add("@FechaPrestamo", SqlDbType.Int).Value = prestamo.;
-                    comando.Parameters.Add("@FechaEntrega", SqlDbType.Int).Value = item;
-                    comando.Parameters.Add("@FechaDevolucion", SqlDbType.Int).Value = item.Cantidad;
-                    comando.Parameters.Add("@IdEjemplar", SqlDbType.Decimal).Value = item.Precio;
-                    comando.Parameters.Add("@IdCliente", SqlDbType.Decimal).Value = item.Total;
+                    comando.Parameters.Add("@FechaPrestamo", SqlDbType.Date).Value = item.FechaPrestamo  ;
+                    comando.Parameters.Add("@FechaEntrega", SqlDbType.Date).Value = item.FechaEntrega ;
+                    comando.Parameters.Add("@FechaDevolucion", SqlDbType.Date).Value = item.FechaDevolucion ;
+                    comando.Parameters.Add("@IdEjemplar", SqlDbType.Int).Value = item.IdEjemplar;
+                    comando.Parameters.Add("@IdCliente", SqlDbType.Int).Value = item.IdCliente;
                     comando.ExecuteNonQuery();
                 }
                 transaction.Commit();

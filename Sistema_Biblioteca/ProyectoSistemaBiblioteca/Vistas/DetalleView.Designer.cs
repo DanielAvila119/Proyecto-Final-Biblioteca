@@ -35,6 +35,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_BuscarLibro = new System.Windows.Forms.Button();
             this.txt_NombreLibro = new System.Windows.Forms.TextBox();
             this.txt_IdLibro = new System.Windows.Forms.TextBox();
+            this.txt_IdPrestamo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_IDCliente = new System.Windows.Forms.TextBox();
@@ -44,7 +46,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DevoluciondateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.PrestamodateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.EntregadateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_Multa = new System.Windows.Forms.TextBox();
             this.txt_Cobro = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_IdPrestamo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -124,6 +124,24 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_IdLibro.Size = new System.Drawing.Size(194, 22);
             this.txt_IdLibro.TabIndex = 4;
             // 
+            // txt_IdPrestamo
+            // 
+            this.txt_IdPrestamo.Location = new System.Drawing.Point(117, 34);
+            this.txt_IdPrestamo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_IdPrestamo.Name = "txt_IdPrestamo";
+            this.txt_IdPrestamo.Size = new System.Drawing.Size(91, 22);
+            this.txt_IdPrestamo.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txt_Nombre);
@@ -187,7 +205,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             this.groupBox3.Controls.Add(this.DevoluciondateTimePicker2);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.PrestamodateTimePicker1);
+            this.groupBox3.Controls.Add(this.EntregadateTimePicker1);
             this.groupBox3.Controls.Add(this.txt_Multa);
             this.groupBox3.Controls.Add(this.txt_Cobro);
             this.groupBox3.Controls.Add(this.label8);
@@ -217,12 +235,12 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.label9.TabIndex = 8;
             this.label9.Text = "Devolucion";
             // 
-            // PrestamodateTimePicker1
+            // EntregadateTimePicker1
             // 
-            this.PrestamodateTimePicker1.Location = new System.Drawing.Point(107, 21);
-            this.PrestamodateTimePicker1.Name = "PrestamodateTimePicker1";
-            this.PrestamodateTimePicker1.Size = new System.Drawing.Size(274, 22);
-            this.PrestamodateTimePicker1.TabIndex = 7;
+            this.EntregadateTimePicker1.Location = new System.Drawing.Point(107, 21);
+            this.EntregadateTimePicker1.Name = "EntregadateTimePicker1";
+            this.EntregadateTimePicker1.Size = new System.Drawing.Size(274, 22);
+            this.EntregadateTimePicker1.TabIndex = 7;
             // 
             // txt_Multa
             // 
@@ -264,9 +282,9 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.label6.Location = new System.Drawing.Point(7, 21);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 16);
+            this.label6.Size = new System.Drawing.Size(62, 16);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Prestamo";
+            this.label6.Text = "Entrega";
             // 
             // DetalledataGridView
             // 
@@ -296,24 +314,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_Cancelar.TabIndex = 8;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
-            // 
-            // txt_IdPrestamo
-            // 
-            this.txt_IdPrestamo.Location = new System.Drawing.Point(117, 34);
-            this.txt_IdPrestamo.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_IdPrestamo.Name = "txt_IdPrestamo";
-            this.txt_IdPrestamo.Size = new System.Drawing.Size(91, 22);
-            this.txt_IdPrestamo.TabIndex = 3;
             // 
             // DetalleView
             // 
@@ -368,6 +368,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txt_IdPrestamo;
         public System.Windows.Forms.DateTimePicker DevoluciondateTimePicker2;
-        public System.Windows.Forms.DateTimePicker PrestamodateTimePicker1;
+        public System.Windows.Forms.DateTimePicker EntregadateTimePicker1;
     }
 }

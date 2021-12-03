@@ -12,8 +12,8 @@ namespace ProyectoSistemaBiblioteca.Modelos.Entidades
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaEntrega { get; set; }
         public DateTime FechaDevolucion { get; set; }
-        //public int IdEjemplar { get; set; }
-        //public int IdCliente { get; set; }
+        public int IdEjemplar { get; set; }
+        public int IdCliente { get; set; }
 
     }
 }

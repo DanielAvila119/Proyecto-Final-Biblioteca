@@ -44,22 +44,33 @@ namespace ProyectoSistemaBiblioteca.Controladores
             vista.btn_Guardar.Click += Btn_Guardar_Click;
             vista.btn_Cancelar.Click += Btn_Cancelar_Click;
             vista.txt_Multa.KeyPress += Txt_Multa_KeyPress;
-            vista.PrestamodateTimePicker1.ValueChanged += PrestamodateTimePicker1_ValueChanged;  
+            vista.EntregadateTimePicker1.CloseUp += EntregadateTimePicker1_CloseUp;
+            vista.txt_Cobro.KeyPress += Txt_Cobro_KeyPress;
             
         }
 
-        private void PrestamodateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void Txt_Cobro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            DateTime FechaPrestamo = vista.PrestamodateTimePicker1.Value.Date;
+            vista.txt_Cobro.Text = Convert.ToDecimal(cobro).ToString();
+        }
+
+        private void EntregadateTimePicker1_CloseUp(object sender, EventArgs e)
+        {
+
+            DateTime FechaEntrega = vista.EntregadateTimePicker1.Value.Date;
             DateTime FechaDevolucion = vista.DevoluciondateTimePicker2.Value.Date;
-            int diaretraso;
             decimal multa;
-            decimal cobro = 25;
-            if (FechaPrestamo > FechaDevolucion)
+            decimal cobro = 25 ;
+            if (FechaDevolucion > FechaEntrega)
             {
-                multa = diaretraso * cobro;
+                multa = cobro + 5;
                 
             }
+            else
+            {
+                multa = 0;
+            }
+            
         }
 
         //        Dim fecha_devolucion As Date = dtp_entrega.Value.Date
@@ -87,12 +98,12 @@ namespace ProyectoSistemaBiblioteca.Controladores
 
         private void Txt_Multa_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            vista.txt_Multa.Text = Convert.ToDecimal( multa).ToString();
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
