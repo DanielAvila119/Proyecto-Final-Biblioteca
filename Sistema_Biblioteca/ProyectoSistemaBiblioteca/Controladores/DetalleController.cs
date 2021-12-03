@@ -15,6 +15,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
         DetalleView vista;
         DetalleDAO detalleDAO = new DetalleDAO();
         Prestamo prestamo = new Prestamo();
+        PrestamoDAO prestamoDAO = new PrestamoDAO();
         //UsuarioDAO usuarioDAO = new UsuarioDAO();
         Cliente cliente = new Cliente();
         ClienteDAO clienteDAO = new ClienteDAO();
@@ -58,6 +59,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
         private void Txt_IdPrestamo_KeyPress(object sender, KeyPressEventArgs e)
         {
             
+            }
         }
 
         private void DevoluciondateTimePicker2_CloseUp(object sender, EventArgs e)
