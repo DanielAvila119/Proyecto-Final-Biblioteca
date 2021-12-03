@@ -58,7 +58,16 @@ namespace ProyectoSistemaBiblioteca.Controladores
 
         private void Txt_IdPrestamo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                prestamo = prestamoDAO.GetPrestamoPorID(vista.txt_IdPrestamo.Text);
+
+                vista.EntregadateTimePicker1.Value = prestamo.FechaEntrega;
+            }
+            else
+            {
+                prestamo = null;
+                //vista.EntregadateTimePicker1.Value;
             }
         }
 
