@@ -29,6 +29,8 @@ namespace ProyectoSistemaBiblioteca.Vistas
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuView));
             this.ribbonControlAdv1 = new Syncfusion.Windows.Forms.Tools.RibbonControlAdv();
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
@@ -45,6 +47,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripTabItem5 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx5 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.DetalleToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
             this.toolStripTabItem1.Panel.SuspendLayout();
@@ -125,7 +128,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx1.Office12Mode = false;
             this.toolStripEx1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx1.Size = new System.Drawing.Size(122, 78);
+            this.toolStripEx1.Size = new System.Drawing.Size(42, 78);
             this.toolStripEx1.TabIndex = 0;
             // 
             // ClientesToolStripButton
@@ -134,7 +137,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ClientesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ClientesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ClientesToolStripButton.Name = "ClientesToolStripButton";
-            this.ClientesToolStripButton.Size = new System.Drawing.Size(113, 61);
+            this.ClientesToolStripButton.Size = new System.Drawing.Size(113, 75);
             this.ClientesToolStripButton.Text = "Lista de Clientes";
             this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ClientesToolStripButton.Click += new System.EventHandler(this.ClientesToolStripButton_Click);
@@ -169,7 +172,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx2.Office12Mode = false;
             this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx2.Size = new System.Drawing.Size(118, 78);
+            this.toolStripEx2.Size = new System.Drawing.Size(39, 78);
             this.toolStripEx2.TabIndex = 0;
             // 
             // LibrosToolStripButton
@@ -178,7 +181,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.LibrosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.LibrosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LibrosToolStripButton.Name = "LibrosToolStripButton";
-            this.LibrosToolStripButton.Size = new System.Drawing.Size(109, 61);
+            this.LibrosToolStripButton.Size = new System.Drawing.Size(109, 75);
             this.LibrosToolStripButton.Text = "Datos de Libros";
             this.LibrosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.LibrosToolStripButton.Click += new System.EventHandler(this.LibrosToolStripButton_Click);
@@ -213,7 +216,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx3.Office12Mode = false;
             this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx3.Size = new System.Drawing.Size(88, 78);
+            this.toolStripEx3.Size = new System.Drawing.Size(39, 78);
             this.toolStripEx3.TabIndex = 0;
             // 
             // EjemplaresToolStripButton
@@ -222,7 +225,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.EjemplaresToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.EjemplaresToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.EjemplaresToolStripButton.Name = "EjemplaresToolStripButton";
-            this.EjemplaresToolStripButton.Size = new System.Drawing.Size(79, 61);
+            this.EjemplaresToolStripButton.Size = new System.Drawing.Size(79, 75);
             this.EjemplaresToolStripButton.Text = "Ejemplares";
             this.EjemplaresToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.EjemplaresToolStripButton.Click += new System.EventHandler(this.EjemplaresToolStripButton_Click);
@@ -257,7 +260,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(140, 78);
+            this.toolStripEx4.Size = new System.Drawing.Size(39, 78);
             this.toolStripEx4.TabIndex = 0;
             // 
             // PrestamoLibrosToolStripButton
@@ -266,7 +269,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.PrestamoLibrosToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.PrestamoLibrosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PrestamoLibrosToolStripButton.Name = "PrestamoLibrosToolStripButton";
-            this.PrestamoLibrosToolStripButton.Size = new System.Drawing.Size(131, 61);
+            this.PrestamoLibrosToolStripButton.Size = new System.Drawing.Size(131, 75);
             this.PrestamoLibrosToolStripButton.Text = "Préstamo de Libros";
             this.PrestamoLibrosToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.PrestamoLibrosToolStripButton.Click += new System.EventHandler(this.PrestamoLibrosToolStripButton_Click);
@@ -301,7 +304,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx5.Office12Mode = false;
             this.toolStripEx5.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx5.Size = new System.Drawing.Size(177, 78);
+            this.toolStripEx5.Size = new System.Drawing.Size(146, 78);
             this.toolStripEx5.TabIndex = 0;
             // 
             // DetalleToolStripButton
@@ -315,12 +318,23 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.DetalleToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.DetalleToolStripButton.Click += new System.EventHandler(this.DetalleToolStripButton_Click);
             // 
+            // tabbedMDIManager1
+            // 
+            this.tabbedMDIManager1.AttachedTo = this;
+            this.tabbedMDIManager1.CloseButtonBackColor = System.Drawing.Color.White;
+            this.tabbedMDIManager1.CloseButtonToolTip = "";
+            this.tabbedMDIManager1.DropDownButtonToolTip = "";
+            this.tabbedMDIManager1.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabbedMDIManager1.NeedUpdateHostedForm = false;
+            this.tabbedMDIManager1.ShowCloseButtonBackColor = true;
+            // 
             // MenuView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 441);
             this.Controls.Add(this.ribbonControlAdv1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.Name = "MenuView";
@@ -371,5 +385,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
         private Syncfusion.Windows.Forms.Tools.ToolStripTabItem toolStripTabItem5;
         private Syncfusion.Windows.Forms.Tools.ToolStripEx toolStripEx5;
         private System.Windows.Forms.ToolStripButton DetalleToolStripButton;
+        public Syncfusion.Windows.Forms.Tools.TabbedMDIManager tabbedMDIManager1;
     }
 }
