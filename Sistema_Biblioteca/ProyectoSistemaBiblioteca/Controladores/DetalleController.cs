@@ -57,10 +57,12 @@ namespace ProyectoSistemaBiblioteca.Controladores
 
         private void Txt_IdPrestamo_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             if (e.KeyChar == (char)Keys.Enter)
             {
                 prestamo = prestamoDAO.GetPrestamoPorID(vista.txt_IdPrestamo.Text);
 
+                
                 vista.EntregadateTimePicker1.Value = prestamo.FechaEntrega;
                 vista.DevoluciondateTimePicker2.Value = prestamo.FechaDevolucion;
                 vista.DetalledataGridView.DataSource = detalleDAO.GetDetalle();
@@ -88,11 +90,11 @@ namespace ProyectoSistemaBiblioteca.Controladores
 
                 multa = dias * cobro;
                 vista.DetalledataGridView.DataSource = null;
-                
+
 
                 vista.txt_Multa.Text = multa.ToString("N2");
                 vista.txt_Cobro.Text = cobro.ToString("N2");
-                
+
             }
             else
             {
