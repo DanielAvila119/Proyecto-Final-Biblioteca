@@ -81,31 +81,31 @@ namespace ProyectoSistemaBiblioteca.Controladores
            
             if (vista.txt_Nombre.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Nombre, "Por favor ingrese un Nombre");
+                vista.errorProvider1.SetError(vista.txt_Nombre, "Por Favor Ingrese Un Nombre");
                 vista.txt_Nombre.Focus();
                 return;
             }
             if (vista.txt_Direccion.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Direccion, "Por favor ingrese una Dirección");
+                vista.errorProvider1.SetError(vista.txt_Direccion, "Por Favor Ingrese Una Dirección");
                 vista.txt_Direccion.Focus();
                 return;
             }
             if (vista.txt_Telefono.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Telefono, "Por favor ingrese un Numero De Telefono");
+                vista.errorProvider1.SetError(vista.txt_Telefono, "Por Favor Ingrese Un Numero De Telefono");
                 vista.txt_Telefono.Focus();
                 return;
             }
             if (vista.txt_Email.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Email, "Por favor ingrese un Email");
+                vista.errorProvider1.SetError(vista.txt_Email, "Por Favor Ingrese Un Email");
                 vista.txt_Email.Focus();
                 return;
             }
             if (vista.txt_Ocupacion.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Ocupacion, "Por favor ingrese una Ocupacion");
+                vista.errorProvider1.SetError(vista.txt_Ocupacion, "Por Favor Ingrese Una Ocupacion");
                 vista.txt_Ocupacion.Focus();
                 return;
             }
@@ -124,11 +124,11 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     bool inserto = clienteDAO.InsertarNuevoCliente(cliente);
                     if (inserto)
                     {
-                        MessageBox.Show("Cliente creado exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cliente Creado Exitosamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo crear el Cliente, intente denuevo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Se Pudo Crear El Cliente, Intente De Nuevo Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
@@ -146,7 +146,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     }
                     else
                     {
-                        MessageBox.Show("No se puedo Modificar el usuario. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Se Pudo Modificar El Usuario. Vuelvalo A intentarlo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

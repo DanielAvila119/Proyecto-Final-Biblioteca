@@ -247,10 +247,10 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // ImagenPictureBox
             // 
             this.ImagenPictureBox.Image = global::ProyectoSistemaBiblioteca.Properties.Resources.LIBRO_ICONO;
-            this.ImagenPictureBox.Location = new System.Drawing.Point(455, 32);
+            this.ImagenPictureBox.Location = new System.Drawing.Point(440, 32);
             this.ImagenPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
-            this.ImagenPictureBox.Size = new System.Drawing.Size(123, 154);
+            this.ImagenPictureBox.Size = new System.Drawing.Size(138, 154);
             this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox.TabIndex = 66;
             this.ImagenPictureBox.TabStop = false;
@@ -259,7 +259,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(591, 428);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Eliminar);

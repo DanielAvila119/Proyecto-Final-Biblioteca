@@ -42,7 +42,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 }
                 else
                 {
-                    MessageBox.Show("No se puedo Eliminar el libro. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No Se Pudo Eliminar El libro. Vuelvalo A Intentar Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -81,32 +81,32 @@ namespace ProyectoSistemaBiblioteca.Controladores
           
             if (vista.txt_Titulo.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Titulo, "Por favor ingrese el titulo");
+                vista.errorProvider1.SetError(vista.txt_Titulo, "Por Favor Ingrese El Titulo");
                 vista.txt_Titulo.Focus();
                 return;
             }
 
             if (vista.txt_Autor.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Autor, "Por favor ingrese el autor");
+                vista.errorProvider1.SetError(vista.txt_Autor, "Por Favor Ingrese El Autor");
                 vista.txt_Autor.Focus();
                 return;
             }
             if (vista.txt_Editor.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Editor, "Por favor ingrese el editor");
+                vista.errorProvider1.SetError(vista.txt_Editor, "Por Favor Ingrese El Editor");
                 vista.txt_Editor.Focus();
                 return;
             }
             if (vista.txt_NumEdicion.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_NumEdicion, "Por favor ingrese el numero de edicion");
+                vista.errorProvider1.SetError(vista.txt_NumEdicion, "Por Favor Ingrese El Numero De Edicion");
                 vista.txt_NumEdicion.Focus();
                 return;
             }
             if (vista.txt_NumEjemplares.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_NumEjemplares, "Por favor ingrese el numero de ejemplares del libro");
+                vista.errorProvider1.SetError(vista.txt_NumEjemplares, "Por Favor Ingrese El Numero De Ejemplares Del Libro");
                 vista.txt_NumEjemplares.Focus();
                 return;
             }
@@ -125,11 +125,11 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     bool inserto = libroDAO.InsertarNuevoLibro(libro);
                     if (inserto)
                     {
-                        MessageBox.Show("libro insertedo exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Libro Insertedo Exitosamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo insertar el libro, intente denuevo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Se Pudo Insertar El Libro, Intente De Nuevo Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
@@ -147,7 +147,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     }
                     else
                     {
-                        MessageBox.Show("No se puedo Modificar el libro. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Se Pudo Modificar El libro. Vuelvalo A Intentar Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

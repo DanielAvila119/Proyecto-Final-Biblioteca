@@ -43,7 +43,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 }
                 else
                 {
-                    MessageBox.Show("No se puedo Eliminar el ejemplar. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No Se Pudo Eliminar El Ejemplar. Vuelvalo A Intentarlo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -79,19 +79,19 @@ namespace ProyectoSistemaBiblioteca.Controladores
         {
             if (vista.txt_NumEjemplar.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_NumEjemplar, "Por favor ingrese un Ejemplar");
+                vista.errorProvider1.SetError(vista.txt_NumEjemplar, "Por Favor Ingrese Un Ejemplar");
                 vista.txt_NumEjemplar.Focus();
                 return;
             }
             if (vista.txt_EstadoConservacion.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_EstadoConservacion, "Por favor ingrese el estado");
+                vista.errorProvider1.SetError(vista.txt_EstadoConservacion, "Por Favor Ingrese El Estado");
                 vista.txt_EstadoConservacion.Focus();
                 return;
             }
             if (vista.txt_Idlibro.Text == "")
             {
-                vista.errorProvider1.SetError(vista.txt_Idlibro, "Por favor ingrese un id de un libro");
+                vista.errorProvider1.SetError(vista.txt_Idlibro, "Por Favor Ingrese Un ID De libro");
                 vista.txt_Idlibro.Focus();
                 return;
             }
@@ -108,11 +108,11 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     bool inserto = ejemplarDAO.InsertarNuevoEjemplar(ejemplar);
                     if (inserto)
                     {
-                        MessageBox.Show("Ejemplar creado exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Ejemplar Creado Exitosamente!", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo crear el Ejemplar, intente denuevo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Se Pudo Crear El Ejemplar, Intente De Nuevo Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
@@ -130,7 +130,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     }
                     else
                     {
-                        MessageBox.Show("No se puedo Modificar el Ejemplar. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Se Pudo Modificar El Ejemplar. Vuelvalo A Intentar Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

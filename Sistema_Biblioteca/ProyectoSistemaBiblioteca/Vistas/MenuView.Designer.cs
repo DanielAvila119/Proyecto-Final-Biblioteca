@@ -61,6 +61,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // ribbonControlAdv1
             // 
+            this.ribbonControlAdv1.BackColor = System.Drawing.Color.Maroon;
             this.ribbonControlAdv1.Dock = Syncfusion.Windows.Forms.Tools.DockStyleEx.Top;
             this.ribbonControlAdv1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbonControlAdv1.Header.AddMainItem(toolStripTabItem1);
@@ -134,7 +135,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.ClientesToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ClientesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ClientesToolStripButton.Name = "ClientesToolStripButton";
-            this.ClientesToolStripButton.Size = new System.Drawing.Size(113, 53);
+            this.ClientesToolStripButton.Size = new System.Drawing.Size(113, 61);
             this.ClientesToolStripButton.Text = "Lista de Clientes";
             this.ClientesToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ClientesToolStripButton.Click += new System.EventHandler(this.ClientesToolStripButton_Click);
@@ -169,7 +170,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx2.Office12Mode = false;
             this.toolStripEx2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx2.Size = new System.Drawing.Size(39, 78);
+            this.toolStripEx2.Size = new System.Drawing.Size(118, 78);
             this.toolStripEx2.TabIndex = 0;
             // 
             // LibrosToolStripButton
@@ -213,7 +214,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx3.Office12Mode = false;
             this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx3.Size = new System.Drawing.Size(39, 78);
+            this.toolStripEx3.Size = new System.Drawing.Size(88, 78);
             this.toolStripEx3.TabIndex = 0;
             // 
             // EjemplaresToolStripButton
@@ -257,7 +258,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.toolStripEx4.Office12Mode = false;
             this.toolStripEx4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.toolStripEx4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx4.Size = new System.Drawing.Size(39, 78);
+            this.toolStripEx4.Size = new System.Drawing.Size(140, 78);
             this.toolStripEx4.TabIndex = 0;
             // 
             // PrestamoLibrosToolStripButton

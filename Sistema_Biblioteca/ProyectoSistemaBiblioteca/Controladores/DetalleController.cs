@@ -16,7 +16,6 @@ namespace ProyectoSistemaBiblioteca.Controladores
         DetalleDAO detalleDAO = new DetalleDAO();
         Prestamo prestamo = new Prestamo();
         PrestamoDAO prestamoDAO = new PrestamoDAO();
-        //UsuarioDAO usuarioDAO = new UsuarioDAO();
         Cliente cliente = new Cliente();
         ClienteDAO clienteDAO = new ClienteDAO();
         Libro libro = new Libro();
@@ -129,11 +128,11 @@ namespace ProyectoSistemaBiblioteca.Controladores
             bool inserto = detalleDAO.InsertarNuevoDetallePrestamo(detalle, listaDetallePrestamo);
             if (inserto)
             {
-                MessageBox.Show("Prestamo Registrado correctamente");
+                MessageBox.Show("Prestamo Registrado Correctamente!");
             }
             else
             {
-                MessageBox.Show("Error al registrar El Prestamo");
+                MessageBox.Show("Error Al Registrar El Prestamo!");
             }
         }
 

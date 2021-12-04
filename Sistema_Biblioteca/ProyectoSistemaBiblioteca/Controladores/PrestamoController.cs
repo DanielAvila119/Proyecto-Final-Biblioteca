@@ -44,7 +44,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                 }
                 else
                 {
-                    MessageBox.Show("No se puedo Eliminar el préstamo. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No Se Pudo Eliminar El Préstamo. Vuelvalo A Intentar Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -82,31 +82,31 @@ namespace ProyectoSistemaBiblioteca.Controladores
 
             if (vista.PrestamoDateTimePicker.Text == "")
             {
-                vista.errorProvider1.SetError(vista.PrestamoDateTimePicker, "Por favor ingrese una fecha de préstamo");
+                vista.errorProvider1.SetError(vista.PrestamoDateTimePicker, "Por Favor Ingrese Una Fecha De Préstamo");
                 vista.PrestamoDateTimePicker.Focus();
                 return;
             }
             if (vista.EntregaDateTimePicker.Text == "")
             {
-                vista.errorProvider1.SetError(vista.EntregaDateTimePicker, "Por favor ingrese una fecha de entrega");
+                vista.errorProvider1.SetError(vista.EntregaDateTimePicker, "Por Favor Ingrese Una Fecha De Entrega");
                 vista.EntregaDateTimePicker.Focus();
                 return;
             }
             if (vista.DevolucionDateTimePicker.Text == "")
             {
-                vista.errorProvider1.SetError(vista.DevolucionDateTimePicker, "Por favor ingrese una fecha de devolución");
+                vista.errorProvider1.SetError(vista.DevolucionDateTimePicker, "Por Favor Ingrese Una Fecha De Devolución");
                 vista.DevolucionDateTimePicker.Focus();
                 return;
             }
             if (vista.TxtIdEjemplar.Text == "")
             {
-                vista.errorProvider1.SetError(vista.TxtIdEjemplar, "Por favor ingrese un id de ejemplar");
+                vista.errorProvider1.SetError(vista.TxtIdEjemplar, "Por Favor Ingrese Un ID De Ejemplar");
                 vista.TxtIdEjemplar.Focus();
                 return;
             }
             if (vista.TxtIdCliente.Text == "")
             {
-                vista.errorProvider1.SetError(vista.TxtIdCliente, "Por favor ingrese un id cliente");
+                vista.errorProvider1.SetError(vista.TxtIdCliente, "Por Favor Ingrese Un ID De Cliente");
                 vista.TxtIdCliente.Focus();
                 return;
             }
@@ -125,11 +125,11 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     bool inserto = prestamoDAO.InsertarNuevoPrestamo(prestamo, cliente, ejemplar);
                     if (inserto)
                     {
-                        MessageBox.Show("Préstamo creado exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Préstamo Creado Exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo insertar el Préstamo, intente denuevo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se Pudo Insertar El Préstamo, Intente De Nuevo Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
@@ -147,7 +147,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
                     }
                     else
                     {
-                        MessageBox.Show("No se puedo Modificar el préstamo. Vuelvalo a intentar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No Se Pudo Modificar El Préstamo. Vuelvalo A Intentar Por Favor", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

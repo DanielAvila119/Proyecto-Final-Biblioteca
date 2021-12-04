@@ -244,7 +244,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(534, 415);
             this.Controls.Add(this.TxtIdCliente);
             this.Controls.Add(this.label7);

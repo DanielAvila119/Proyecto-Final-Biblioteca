@@ -42,7 +42,7 @@ namespace ProyectoSistemaBiblioteca.Controladores
             }
             else
             {
-                MessageBox.Show("Usuario Incorrecto, vuelva a intentarlo");
+                MessageBox.Show("Usuario Incorrecto, Vuelva A Intentarlo");
             }
         }
 

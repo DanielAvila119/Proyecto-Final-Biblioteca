@@ -353,7 +353,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.btn_Guardar.TabIndex = 7;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
-          
             // 
             // btn_Cancelar
             // 
@@ -368,7 +367,7 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(836, 513);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Guardar);
