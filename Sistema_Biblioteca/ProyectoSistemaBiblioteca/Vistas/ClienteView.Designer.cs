@@ -179,7 +179,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // 
             // btn_Eliminar
             // 
-            this.btn_Eliminar.Enabled = false;
             this.btn_Eliminar.Location = new System.Drawing.Point(318, 259);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(94, 32);
