@@ -167,12 +167,12 @@ namespace ProyectoSistemaBiblioteca.Vistas
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(110, 134);
+            this.label3.Location = new System.Drawing.Point(92, 137);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.Size = new System.Drawing.Size(70, 16);
             this.label3.TabIndex = 49;
-            this.label3.Text = "Editor:";
+            this.label3.Text = "Editorial:";
             // 
             // label2
             // 

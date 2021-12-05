@@ -75,7 +75,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(179, 22);
             this.txt_Email.TabIndex = 3;
-            this.txt_Email.Text = "grupo1@unah.hn";
             // 
             // txt_Clave
             // 
@@ -84,7 +83,6 @@ namespace ProyectoSistemaBiblioteca.Vistas
             this.txt_Clave.PasswordChar = '*';
             this.txt_Clave.Size = new System.Drawing.Size(178, 22);
             this.txt_Clave.TabIndex = 4;
-            this.txt_Clave.Text = "1234";
             // 
             // btn_Aceptar
             // 
